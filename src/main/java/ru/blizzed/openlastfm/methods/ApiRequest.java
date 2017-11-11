@@ -3,14 +3,16 @@ package ru.blizzed.openlastfm.methods;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.sun.istack.internal.NotNull;
-import okhttp3.*;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.blizzed.openlastfm.OpenLastFMContext;
 import ru.blizzed.openlastfm.RequestsExecutor;
 import ru.blizzed.openlastfm.model.RootlessModelBuilder;
 import ru.blizzed.openlastfm.model.commons.Error;
 import ru.blizzed.openlastfm.params.LastFMParams;
-import ru.blizzed.openlastfm.OpenLastFMContext;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -58,12 +60,12 @@ public final class ApiRequest<ResultType> {
     }
 
     private void handleResponse(ApiRequestListener<ResultType> listener, Response response) throws IOException {
-        if (response.isSuccessful()) parseThisShit(response.body().string(), listener);
+        if (response.isSuccessful()) parseAndNotify(response.body().string(), listener);
         else notifyError(listener, buildErrorResponse(response));
         response.close();
     }
 
-    private void parseThisShit(String originalResponse, ApiRequestListener<ResultType> listener) {
+    private void parseAndNotify(String originalResponse, ApiRequestListener<ResultType> listener) {
         JsonParser parser = new JsonParser();
         JsonObject root = parser.parse(originalResponse).getAsJsonObject();
 
