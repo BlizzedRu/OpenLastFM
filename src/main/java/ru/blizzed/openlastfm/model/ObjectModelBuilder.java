@@ -1,7 +1,6 @@
 package ru.blizzed.openlastfm.model;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 public class ObjectModelBuilder<ContentType> extends ModelBuilder<ContentType> {
@@ -15,12 +14,14 @@ public class ObjectModelBuilder<ContentType> extends ModelBuilder<ContentType> {
 
     @Override
     protected ContentType parse(JsonObject nextToRootElement) {
-        if (!getElementTagName().equals("")) parseObject(nextToRootElement.getAsJsonObject(getElementTagName()));
+        if (!getElementTagName().equals(""))
+            return parseObject(nextToRootElement.getAsJsonObject(getElementTagName()));
         return parseObject(nextToRootElement);
     }
 
-    private ContentType parseObject(JsonElement jsonElement) {
-        return new Gson().fromJson(jsonElement, contentTypeClass);
+    private ContentType parseObject(JsonObject jsonObject) {
+        System.out.println(jsonObject.toString());
+        return new Gson().fromJson(jsonObject, contentTypeClass);
     }
 
 }
