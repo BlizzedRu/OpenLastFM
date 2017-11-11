@@ -1,0 +1,362 @@
+{
+  "weeklytrackchart": {
+    "track": [
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Praise Abort",
+        "mbid": "",
+        "playcount": "3",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Praise+Abort",
+        "@attr": {
+          "rank": "1"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Fish On",
+        "mbid": "",
+        "playcount": "2",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Fish+On",
+        "@attr": {
+          "rank": "2"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Skills in Pills",
+        "mbid": "",
+        "playcount": "2",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Skills+in+Pills",
+        "@attr": {
+          "rank": "3"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Children Of The Sun",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Children+Of+The+Sun",
+        "@attr": {
+          "rank": "4"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Fat",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Fat",
+        "@attr": {
+          "rank": "5"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Dimmu Borgir",
+          "mbid": "17167af8-c1da-45cc-bba2-9d23f068b7a3"
+        },
+        "name": "Gateways",
+        "mbid": "3cde2e36-ac7f-4c0b-aeb5-cb9e284e7a30",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Dimmu+Borgir/_/Gateways",
+        "@attr": {
+          "rank": "6"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Golden Shower",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Golden+Shower",
+        "@attr": {
+          "rank": "7"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Home Sweet Home",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Home+Sweet+Home",
+        "@attr": {
+          "rank": "8"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "Ladyboy",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/Ladyboy",
+        "@attr": {
+          "rank": "9"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Dimmu Borgir",
+          "mbid": "17167af8-c1da-45cc-bba2-9d23f068b7a3"
+        },
+        "name": "Mourning Palace",
+        "mbid": "d4349f9b-6731-4d6e-b391-943d0ae161be",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Dimmu+Borgir/_/Mourning+Palace",
+        "@attr": {
+          "rank": "10"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Dimmu Borgir",
+          "mbid": "17167af8-c1da-45cc-bba2-9d23f068b7a3"
+        },
+        "name": "Progenies of the Great Apocalypse",
+        "mbid": "8cc87815-5a97-414b-95e8-ec9a03abc65e",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Dimmu+Borgir/_/Progenies+of+the+Great+Apocalypse",
+        "@attr": {
+          "rank": "11"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Dimmu Borgir",
+          "mbid": "17167af8-c1da-45cc-bba2-9d23f068b7a3"
+        },
+        "name": "Puritania",
+        "mbid": "2e1b59ce-c1c4-4695-b776-de881db6f8b5",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/2161ba017d9c4bf092fb0e35364d297d.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Dimmu+Borgir/_/Puritania",
+        "@attr": {
+          "rank": "12"
+        }
+      },
+      {
+        "artist": {
+          "#text": "Lindemann",
+          "mbid": ""
+        },
+        "name": "That's My Heart",
+        "mbid": "",
+        "playcount": "1",
+        "image": [
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "small"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "medium"
+          },
+          {
+            "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+            "size": "large"
+          }
+        ],
+        "url": "https://www.last.fm/music/Lindemann/_/That%27s+My+Heart",
+        "@attr": {
+          "rank": "13"
+        }
+      }
+    ],
+    "@attr": {
+      "user": "BlizzedRu",
+      "from": "1509451200",
+      "to": "1510056000"
+    }
+  }
+}

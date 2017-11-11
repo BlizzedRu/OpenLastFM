@@ -1,0 +1,70 @@
+{
+  "track": {
+    "name": "Seemann",
+    "mbid": "1432b3ba-f294-437c-85dc-74c6bda5d575",
+    "url": "https://www.last.fm/music/Rammstein/_/Seemann",
+    "duration": "288000",
+    "streamable": {
+      "#text": "0",
+      "fulltrack": "0"
+    },
+    "listeners": "218692",
+    "playcount": "1611554",
+    "artist": {
+      "name": "Rammstein",
+      "mbid": "b2d122f9-eadb-4930-a196-8f221eeb0c66",
+      "url": "https://www.last.fm/music/Rammstein"
+    },
+    "album": {
+      "artist": "Rammstein",
+      "title": "Herzeleid",
+      "mbid": "abfabaf6-5493-3e96-976e-7fbefc3efa9d",
+      "url": "https://www.last.fm/music/Rammstein/Herzeleid",
+      "image": [
+        {
+          "#text": "https://lastfm-img2.akamaized.net/i/u/34s/12feb327a5484f08878a66dba1b94b23.png",
+          "size": "small"
+        },
+        {
+          "#text": "https://lastfm-img2.akamaized.net/i/u/64s/12feb327a5484f08878a66dba1b94b23.png",
+          "size": "medium"
+        },
+        {
+          "#text": "https://lastfm-img2.akamaized.net/i/u/174s/12feb327a5484f08878a66dba1b94b23.png",
+          "size": "large"
+        },
+        {
+          "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/12feb327a5484f08878a66dba1b94b23.png",
+          "size": "extralarge"
+        }
+      ],
+      "@attr": {
+        "position": "5"
+      }
+    },
+    "toptags": {
+      "tag": [
+        {
+          "name": "industrial metal",
+          "url": "https://www.last.fm/tag/industrial+metal"
+        },
+        {
+          "name": "metal",
+          "url": "https://www.last.fm/tag/metal"
+        },
+        {
+          "name": "industrial",
+          "url": "https://www.last.fm/tag/industrial"
+        },
+        {
+          "name": "german",
+          "url": "https://www.last.fm/tag/german"
+        },
+        {
+          "name": "Rammstein",
+          "url": "https://www.last.fm/tag/Rammstein"
+        }
+      ]
+    }
+  }
+}

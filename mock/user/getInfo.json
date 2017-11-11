@@ -1,0 +1,37 @@
+{
+  "user": {
+    "name": "RJ",
+    "realname": "Richard Jones ",
+    "image": [
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/b26d6fd11de240a1c045dfb5c5d9fe65.png",
+        "size": "small"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/b26d6fd11de240a1c045dfb5c5d9fe65.png",
+        "size": "medium"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/b26d6fd11de240a1c045dfb5c5d9fe65.png",
+        "size": "large"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/b26d6fd11de240a1c045dfb5c5d9fe65.png",
+        "size": "extralarge"
+      }
+    ],
+    "url": "https://www.last.fm/user/RJ",
+    "country": "United Kingdom",
+    "age": "0",
+    "gender": "n",
+    "subscriber": "1",
+    "playcount": "128391",
+    "playlists": "0",
+    "bootstrap": "0",
+    "registered": {
+      "#text": 1037793040,
+      "unixtime": "1037793040"
+    },
+    "type": "alumni"
+  }
+}

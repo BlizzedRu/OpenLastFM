@@ -1,0 +1,17 @@
+{
+  "tags": {
+    "tag": [
+      {
+        "name": "rock",
+        "url": "https://www.last.fm/tag/rock"
+      },
+      {
+        "name": "funky",
+        "url": "https://www.last.fm/tag/funky"
+      }
+    ],
+    "@attr": {
+      "artist": "Red Hot Chili Peppers"
+    }
+  }
+}

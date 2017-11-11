@@ -1,0 +1,350 @@
+{
+  "toptags": {
+    "tag": [
+      {
+        "count": 100,
+        "name": "industrial metal",
+        "url": "https://www.last.fm/tag/industrial+metal"
+      },
+      {
+        "count": 81,
+        "name": "metal",
+        "url": "https://www.last.fm/tag/metal"
+      },
+      {
+        "count": 67,
+        "name": "industrial",
+        "url": "https://www.last.fm/tag/industrial"
+      },
+      {
+        "count": 56,
+        "name": "Rammstein",
+        "url": "https://www.last.fm/tag/Rammstein"
+      },
+      {
+        "count": 53,
+        "name": "german",
+        "url": "https://www.last.fm/tag/german"
+      },
+      {
+        "count": 28,
+        "name": "rock",
+        "url": "https://www.last.fm/tag/rock"
+      },
+      {
+        "count": 15,
+        "name": "hard rock",
+        "url": "https://www.last.fm/tag/hard+rock"
+      },
+      {
+        "count": 10,
+        "name": "mutter",
+        "url": "https://www.last.fm/tag/mutter"
+      },
+      {
+        "count": 10,
+        "name": "deutsch",
+        "url": "https://www.last.fm/tag/deutsch"
+      },
+      {
+        "count": 7,
+        "name": "industrial rock",
+        "url": "https://www.last.fm/tag/industrial+rock"
+      },
+      {
+        "count": 7,
+        "name": "heavy metal",
+        "url": "https://www.last.fm/tag/heavy+metal"
+      },
+      {
+        "count": 5,
+        "name": "German metal",
+        "url": "https://www.last.fm/tag/German+metal"
+      },
+      {
+        "count": 5,
+        "name": "alternative",
+        "url": "https://www.last.fm/tag/alternative"
+      },
+      {
+        "count": 5,
+        "name": "germany",
+        "url": "https://www.last.fm/tag/germany"
+      },
+      {
+        "count": 5,
+        "name": "00s",
+        "url": "https://www.last.fm/tag/00s"
+      },
+      {
+        "count": 5,
+        "name": "tanz metal",
+        "url": "https://www.last.fm/tag/tanz+metal"
+      },
+      {
+        "count": 4,
+        "name": "melancholic",
+        "url": "https://www.last.fm/tag/melancholic"
+      },
+      {
+        "count": 4,
+        "name": "sad",
+        "url": "https://www.last.fm/tag/sad"
+      },
+      {
+        "count": 4,
+        "name": "Ballad",
+        "url": "https://www.last.fm/tag/Ballad"
+      },
+      {
+        "count": 4,
+        "name": "Favourites",
+        "url": "https://www.last.fm/tag/Favourites"
+      },
+      {
+        "count": 4,
+        "name": "Neue Deutsche Haerte",
+        "url": "https://www.last.fm/tag/Neue+Deutsche+Haerte"
+      },
+      {
+        "count": 3,
+        "name": "electronic",
+        "url": "https://www.last.fm/tag/electronic"
+      },
+      {
+        "count": 3,
+        "name": "Power metal",
+        "url": "https://www.last.fm/tag/Power+metal"
+      },
+      {
+        "count": 3,
+        "name": "alternative rock",
+        "url": "https://www.last.fm/tag/alternative+rock"
+      },
+      {
+        "count": 3,
+        "name": "Progressive metal",
+        "url": "https://www.last.fm/tag/Progressive+metal"
+      },
+      {
+        "count": 3,
+        "name": "beautiful",
+        "url": "https://www.last.fm/tag/beautiful"
+      },
+      {
+        "count": 3,
+        "name": "neue deutsche härte",
+        "url": "https://www.last.fm/tag/neue+deutsche+h%C3%A4rte"
+      },
+      {
+        "count": 3,
+        "name": "german rock",
+        "url": "https://www.last.fm/tag/german+rock"
+      },
+      {
+        "count": 2,
+        "name": "seen live",
+        "url": "https://www.last.fm/tag/seen+live"
+      },
+      {
+        "count": 2,
+        "name": "punk",
+        "url": "https://www.last.fm/tag/punk"
+      },
+      {
+        "count": 2,
+        "name": "heavy",
+        "url": "https://www.last.fm/tag/heavy"
+      },
+      {
+        "count": 2,
+        "name": "dark",
+        "url": "https://www.last.fm/tag/dark"
+      },
+      {
+        "count": 2,
+        "name": "alternative metal",
+        "url": "https://www.last.fm/tag/alternative+metal"
+      },
+      {
+        "count": 2,
+        "name": "Gothic Metal",
+        "url": "https://www.last.fm/tag/Gothic+Metal"
+      },
+      {
+        "count": 2,
+        "name": "great songs",
+        "url": "https://www.last.fm/tag/great+songs"
+      },
+      {
+        "count": 2,
+        "name": "6 of 10 stars",
+        "url": "https://www.last.fm/tag/6+of+10+stars"
+      },
+      {
+        "count": 2,
+        "name": "favorites",
+        "url": "https://www.last.fm/tag/favorites"
+      },
+      {
+        "count": 2,
+        "name": "epic",
+        "url": "https://www.last.fm/tag/epic"
+      },
+      {
+        "count": 2,
+        "name": "melancholy",
+        "url": "https://www.last.fm/tag/melancholy"
+      },
+      {
+        "count": 2,
+        "name": "symphonic metal",
+        "url": "https://www.last.fm/tag/symphonic+metal"
+      },
+      {
+        "count": 2,
+        "name": "Nu Metal",
+        "url": "https://www.last.fm/tag/Nu+Metal"
+      },
+      {
+        "count": 2,
+        "name": "FUCKING AWESOME",
+        "url": "https://www.last.fm/tag/FUCKING+AWESOME"
+      },
+      {
+        "count": 2,
+        "name": "7 of 10 stars",
+        "url": "https://www.last.fm/tag/7+of+10+stars"
+      },
+      {
+        "count": 2,
+        "name": "2001",
+        "url": "https://www.last.fm/tag/2001"
+      },
+      {
+        "count": 1,
+        "name": "chillout",
+        "url": "https://www.last.fm/tag/chillout"
+      },
+      {
+        "count": 1,
+        "name": "Grunge",
+        "url": "https://www.last.fm/tag/Grunge"
+      },
+      {
+        "count": 1,
+        "name": "krautrock",
+        "url": "https://www.last.fm/tag/krautrock"
+      },
+      {
+        "count": 1,
+        "name": "dramatic",
+        "url": "https://www.last.fm/tag/dramatic"
+      },
+      {
+        "count": 1,
+        "name": "male vocalists",
+        "url": "https://www.last.fm/tag/male+vocalists"
+      },
+      {
+        "count": 1,
+        "name": "best",
+        "url": "https://www.last.fm/tag/best"
+      },
+      {
+        "count": 1,
+        "name": "5 Stars",
+        "url": "https://www.last.fm/tag/5+Stars"
+      },
+      {
+        "count": 1,
+        "name": "rock ballad",
+        "url": "https://www.last.fm/tag/rock+ballad"
+      },
+      {
+        "count": 1,
+        "name": "favorite tracks",
+        "url": "https://www.last.fm/tag/favorite+tracks"
+      },
+      {
+        "count": 1,
+        "name": "10 of 10 stars",
+        "url": "https://www.last.fm/tag/10+of+10+stars"
+      },
+      {
+        "count": 1,
+        "name": "mother",
+        "url": "https://www.last.fm/tag/mother"
+      },
+      {
+        "count": 1,
+        "name": "5 Star",
+        "url": "https://www.last.fm/tag/5+Star"
+      },
+      {
+        "count": 1,
+        "name": "metal industrial",
+        "url": "https://www.last.fm/tag/metal+industrial"
+      },
+      {
+        "count": 1,
+        "name": "on repeat",
+        "url": "https://www.last.fm/tag/on+repeat"
+      },
+      {
+        "count": 1,
+        "name": "tanz-metal",
+        "url": "https://www.last.fm/tag/tanz-metal"
+      },
+      {
+        "count": 1,
+        "name": "my stuff",
+        "url": "https://www.last.fm/tag/my+stuff"
+      },
+      {
+        "count": 1,
+        "name": "soramimi",
+        "url": "https://www.last.fm/tag/soramimi"
+      },
+      {
+        "count": 1,
+        "name": "radioultra",
+        "url": "https://www.last.fm/tag/radioultra"
+      },
+      {
+        "count": 1,
+        "name": "Metal Deutsch",
+        "url": "https://www.last.fm/tag/Metal+Deutsch"
+      },
+      {
+        "count": 1,
+        "name": "Best fucking songs ever",
+        "url": "https://www.last.fm/tag/Best+fucking+songs+ever"
+      },
+      {
+        "count": 1,
+        "name": "my good old mtv",
+        "url": "https://www.last.fm/tag/my+good+old+mtv"
+      },
+      {
+        "count": 1,
+        "name": "songs i can listen thousand times",
+        "url": "https://www.last.fm/tag/songs+i+can+listen+thousand+times"
+      },
+      {
+        "count": 1,
+        "name": "ramm mutter",
+        "url": "https://www.last.fm/tag/ramm+mutter"
+      },
+      {
+        "count": 1,
+        "name": "this is disgusting but i like it",
+        "url": "https://www.last.fm/tag/this+is+disgusting+but+i+like+it"
+      }
+    ],
+    "@attr": {
+      "artist": "Rammstein",
+      "track": "Mutter"
+    }
+  }
+}

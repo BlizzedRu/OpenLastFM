@@ -1,0 +1,228 @@
+{
+  "artist": {
+    "name": "Lindemann",
+    "url": "https://www.last.fm/music/Lindemann",
+    "image": [
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/34s/502883c5f018ec694cf04c658e0d2929.png",
+        "size": "small"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/64s/502883c5f018ec694cf04c658e0d2929.png",
+        "size": "medium"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/174s/502883c5f018ec694cf04c658e0d2929.png",
+        "size": "large"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/502883c5f018ec694cf04c658e0d2929.png",
+        "size": "extralarge"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/502883c5f018ec694cf04c658e0d2929.png",
+        "size": "mega"
+      },
+      {
+        "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/502883c5f018ec694cf04c658e0d2929.png",
+        "size": ""
+      }
+    ],
+    "streamable": "0",
+    "ontour": "0",
+    "stats": {
+      "listeners": "49587",
+      "playcount": "1655298"
+    },
+    "similar": {
+      "artist": [
+        {
+          "name": "Rammstein",
+          "url": "https://www.last.fm/music/Rammstein",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/c5eff349bc9f4e80b126448628b56eaa.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Emigrate",
+          "url": "https://www.last.fm/music/Emigrate",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/8f2335527eca423ca2399567a1424465.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/8f2335527eca423ca2399567a1424465.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/8f2335527eca423ca2399567a1424465.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8f2335527eca423ca2399567a1424465.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8f2335527eca423ca2399567a1424465.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/8f2335527eca423ca2399567a1424465.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Pain",
+          "url": "https://www.last.fm/music/Pain",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/33462c9714d6496d98da919f6810875b.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/33462c9714d6496d98da919f6810875b.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/33462c9714d6496d98da919f6810875b.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/33462c9714d6496d98da919f6810875b.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/33462c9714d6496d98da919f6810875b.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/33462c9714d6496d98da919f6810875b.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Oomph!",
+          "url": "https://www.last.fm/music/Oomph%21",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/e3c9815256d8bec88138724038754a2e.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/e3c9815256d8bec88138724038754a2e.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/e3c9815256d8bec88138724038754a2e.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e3c9815256d8bec88138724038754a2e.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e3c9815256d8bec88138724038754a2e.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/e3c9815256d8bec88138724038754a2e.png",
+              "size": ""
+            }
+          ]
+        },
+        {
+          "name": "Eisbrecher",
+          "url": "https://www.last.fm/music/Eisbrecher",
+          "image": [
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/34s/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": "small"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/64s/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": "medium"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/174s/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": "large"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": "extralarge"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": "mega"
+            },
+            {
+              "#text": "https://lastfm-img2.akamaized.net/i/u/300x300/f173f0d52a6d46f59edfc6081d053d6e.png",
+              "size": ""
+            }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "tag": [
+        {
+          "name": "industrial metal",
+          "url": "https://www.last.fm/tag/industrial+metal"
+        },
+        {
+          "name": "industrial",
+          "url": "https://www.last.fm/tag/industrial"
+        },
+        {
+          "name": "metal",
+          "url": "https://www.last.fm/tag/metal"
+        },
+        {
+          "name": "german",
+          "url": "https://www.last.fm/tag/german"
+        },
+        {
+          "name": "swedish",
+          "url": "https://www.last.fm/tag/swedish"
+        }
+      ]
+    },
+    "bio": {
+      "links": {
+        "link": {
+          "#text": "",
+          "rel": "original",
+          "href": "https://last.fm/music/Lindemann/+wiki"
+        }
+      },
+      "published": "04 Jan 2015, 12:21",
+      "summary": "Lindemann is a musical project founded by Rammstein frontman Till Lindemann with Swedish producer and multi-instrumentalist Peter Tägtgren (Hypocrisy, Pain, Bloodbath, Lock Up). <a href=\"https://www.last.fm/music/Lindemann\">Read more on Last.fm</a>",
+      "content": "Lindemann is a musical project founded by Rammstein frontman Till Lindemann with Swedish producer and multi-instrumentalist Peter Tägtgren (Hypocrisy, Pain, Bloodbath, Lock Up). <a href=\"https://www.last.fm/music/Lindemann\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply."
+    }
+  }
+}

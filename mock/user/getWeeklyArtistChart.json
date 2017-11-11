@@ -1,0 +1,29 @@
+{
+  "weeklyartistchart": {
+    "artist": [
+      {
+        "name": "Lindemann",
+        "mbid": "",
+        "playcount": "13",
+        "url": "https://www.last.fm/music/Lindemann",
+        "@attr": {
+          "rank": "1"
+        }
+      },
+      {
+        "name": "Dimmu Borgir",
+        "mbid": "17167af8-c1da-45cc-bba2-9d23f068b7a3",
+        "playcount": "4",
+        "url": "https://www.last.fm/music/Dimmu+Borgir",
+        "@attr": {
+          "rank": "2"
+        }
+      }
+    ],
+    "@attr": {
+      "user": "BlizzedRu",
+      "from": "1509451200",
+      "to": "1510056000"
+    }
+  }
+}

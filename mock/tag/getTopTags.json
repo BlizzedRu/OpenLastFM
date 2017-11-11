@@ -1,0 +1,261 @@
+{
+  "toptags": {
+    "@attr": {
+      "offset": 0,
+      "num_res": 50,
+      "total": 2650295
+    },
+    "tag": [
+      {
+        "name": "rock",
+        "count": 3913487,
+        "reach": 391553
+      },
+      {
+        "name": "electronic",
+        "count": 2315248,
+        "reach": 249940
+      },
+      {
+        "name": "seen live",
+        "count": 2114407,
+        "reach": 81483
+      },
+      {
+        "name": "alternative",
+        "count": 2060488,
+        "reach": 258967
+      },
+      {
+        "name": "indie",
+        "count": 1985392,
+        "reach": 249902
+      },
+      {
+        "name": "pop",
+        "count": 1908408,
+        "reach": 220470
+      },
+      {
+        "name": "female vocalists",
+        "count": 1578295,
+        "reach": 166838
+      },
+      {
+        "name": "metal",
+        "count": 1235795,
+        "reach": 154011
+      },
+      {
+        "name": "classic rock",
+        "count": 1134452,
+        "reach": 136307
+      },
+      {
+        "name": "alternative rock",
+        "count": 1133479,
+        "reach": 165242
+      },
+      {
+        "name": "jazz",
+        "count": 1126012,
+        "reach": 144944
+      },
+      {
+        "name": "experimental",
+        "count": 1022356,
+        "reach": 136601
+      },
+      {
+        "name": "ambient",
+        "count": 1022223,
+        "reach": 141394
+      },
+      {
+        "name": "folk",
+        "count": 895024,
+        "reach": 145322
+      },
+      {
+        "name": "punk",
+        "count": 858879,
+        "reach": 140120
+      },
+      {
+        "name": "indie rock",
+        "count": 858096,
+        "reach": 131637
+      },
+      {
+        "name": "Hip-Hop",
+        "count": 830959,
+        "reach": 123875
+      },
+      {
+        "name": "hard rock",
+        "count": 830164,
+        "reach": 113057
+      },
+      {
+        "name": "instrumental",
+        "count": 820877,
+        "reach": 121579
+      },
+      {
+        "name": "singer-songwriter",
+        "count": 819542,
+        "reach": 107188
+      },
+      {
+        "name": "black metal",
+        "count": 794511,
+        "reach": 60433
+      },
+      {
+        "name": "dance",
+        "count": 783651,
+        "reach": 130214
+      },
+      {
+        "name": "80s",
+        "count": 763793,
+        "reach": 99440
+      },
+      {
+        "name": "Progressive rock",
+        "count": 700090,
+        "reach": 94450
+      },
+      {
+        "name": "death metal",
+        "count": 688037,
+        "reach": 70081
+      },
+      {
+        "name": "british",
+        "count": 674962,
+        "reach": 92208
+      },
+      {
+        "name": "hardcore",
+        "count": 671047,
+        "reach": 95904
+      },
+      {
+        "name": "heavy metal",
+        "count": 667610,
+        "reach": 88824
+      },
+      {
+        "name": "soul",
+        "count": 653232,
+        "reach": 98608
+      },
+      {
+        "name": "chillout",
+        "count": 640620,
+        "reach": 102655
+      },
+      {
+        "name": "electronica",
+        "count": 622910,
+        "reach": 100785
+      },
+      {
+        "name": "Classical",
+        "count": 551501,
+        "reach": 72849
+      },
+      {
+        "name": "Soundtrack",
+        "count": 540000,
+        "reach": 82435
+      },
+      {
+        "name": "industrial",
+        "count": 539179,
+        "reach": 82049
+      },
+      {
+        "name": "blues",
+        "count": 536067,
+        "reach": 94427
+      },
+      {
+        "name": "rap",
+        "count": 529107,
+        "reach": 98919
+      },
+      {
+        "name": "punk rock",
+        "count": 526300,
+        "reach": 96154
+      },
+      {
+        "name": "thrash metal",
+        "count": 471341,
+        "reach": 61445
+      },
+      {
+        "name": "acoustic",
+        "count": 467073,
+        "reach": 108764
+      },
+      {
+        "name": "psychedelic",
+        "count": 462611,
+        "reach": 76284
+      },
+      {
+        "name": "90s",
+        "count": 459606,
+        "reach": 56132
+      },
+      {
+        "name": "metalcore",
+        "count": 458332,
+        "reach": 65788
+      },
+      {
+        "name": "japanese",
+        "count": 444772,
+        "reach": 47355
+      },
+      {
+        "name": "post-rock",
+        "count": 431140,
+        "reach": 63703
+      },
+      {
+        "name": "german",
+        "count": 413745,
+        "reach": 58507
+      },
+      {
+        "name": "Progressive metal",
+        "count": 413282,
+        "reach": 61112
+      },
+      {
+        "name": "funk",
+        "count": 409899,
+        "reach": 80713
+      },
+      {
+        "name": "hip hop",
+        "count": 405681,
+        "reach": 74186
+      },
+      {
+        "name": "new wave",
+        "count": 405393,
+        "reach": 62738
+      },
+      {
+        "name": "trance",
+        "count": 402082,
+        "reach": 63642
+      }
+    ]
+  }
+}
