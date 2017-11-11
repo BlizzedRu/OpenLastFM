@@ -19,8 +19,8 @@ public class SkipRootListModelParser<ContentType> extends SkipRootModelParser<Li
 
     @Override
     protected List<ContentType> parseRootless(JsonObject nextToRootElement) {
-        if (nextToRootElement.keySet().contains("#text")) return Collections.emptyList();
-        //if (!getElementTagName().equals("")) return parseList(root.getAsJsonArray(getElementTagName()));
+        if (!nextToRootElement.has(getElementTagName()))
+            return Collections.emptyList();
         return parseList(nextToRootElement.getAsJsonArray(getElementTagName()));
     }
 
