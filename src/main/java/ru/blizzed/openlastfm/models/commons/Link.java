@@ -1,4 +1,4 @@
-package ru.blizzed.openlastfm.model.artist;
+package ru.blizzed.openlastfm.models.commons;
 
 import com.google.gson.annotations.SerializedName;
 

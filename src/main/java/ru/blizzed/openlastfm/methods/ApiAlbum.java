@@ -1,10 +1,12 @@
 package ru.blizzed.openlastfm.methods;
 
-import ru.blizzed.openlastfm.model.ListModelBuilder;
-import ru.blizzed.openlastfm.model.ObjectModelBuilder;
-import ru.blizzed.openlastfm.model.commons.Tag;
-import ru.blizzed.openlastfm.model.album.Album;
-import ru.blizzed.openlastfm.model.artist.Artist;
+import com.google.gson.reflect.TypeToken;
+import ru.blizzed.openlastfm.models.ObjectModelParser;
+import ru.blizzed.openlastfm.models.SkipRootListModelParser;
+import ru.blizzed.openlastfm.models.album.Album;
+import ru.blizzed.openlastfm.models.album.AlbumInfo;
+import ru.blizzed.openlastfm.models.tag.Tag;
+import ru.blizzed.openlastfm.models.tag.TopTag;
 import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.util.List;
@@ -16,8 +18,8 @@ public final class ApiAlbum {
     private ApiAlbum() {
     }
 
-    public static ApiMethod<Album> getInfo() {
-        return new ApiMethod<Album>(alias, "getInfo")
+    public static ApiMethod<AlbumInfo> getInfo() {
+        return new ApiMethod.Builder<AlbumInfo>(alias, "getInfo")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.ALBUM, true, LastFMParams.MBID),
@@ -26,11 +28,11 @@ public final class ApiAlbum {
                         new ApiParamDescription(LastFMParams.USERNAME, false),
                         new ApiParamDescription(LastFMParams.LANG, false)
                 )
-                .setModelBuilder(new ObjectModelBuilder<>("", Album.class));
+                .buildWithResultModelParser(new ObjectModelParser<>("", AlbumInfo.class));
     }
 
     public static ApiMethod<List<Tag>> getTags() {
-        return new ApiMethod<List<Tag>>(alias, "getTags")
+        return new ApiMethod.Builder<List<Tag>>(alias, "getTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.ALBUM, true, LastFMParams.MBID),
@@ -38,26 +40,30 @@ public final class ApiAlbum {
                         new ApiParamDescription(LastFMParams.AUTOCORRECT, false),
                         new ApiParamDescription(LastFMParams.USER, false)
                 )
-                .setModelBuilder(new ListModelBuilder<>("tag"));
+                .buildWithResultModelParser(new SkipRootListModelParser<>("tag", new TypeToken<List<Tag>>() {
+                }));
     }
 
-    public static ApiMethod<List<Tag>> getTopTags() {
-        return new ApiMethod<List<Tag>>(alias, "getTopTags")
+    public static ApiMethod<List<TopTag>> getTopTags() {
+        return new ApiMethod.Builder<List<TopTag>>(alias, "getTopTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.ALBUM, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.MBID, false),
                         new ApiParamDescription(LastFMParams.AUTOCORRECT, false)
-                );
+                )
+                .buildWithResultModelParser(new SkipRootListModelParser<>("tag", new TypeToken<List<TopTag>>() {
+                }));
     }
 
-    public static ApiMethod<List<Artist>> search() {
-        return new ApiMethod<List<Artist>>(alias, "search")
+    public static ApiMethod<List<Album>> search() {
+        return new ApiMethod.Builder<List<Album>>(alias, "search")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.ALBUM, true)
-                );
+                )
+                .buildWithResultModelParser(null);
     }
 
 }

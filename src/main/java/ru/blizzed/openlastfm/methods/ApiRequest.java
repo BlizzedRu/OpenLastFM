@@ -10,8 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.blizzed.openlastfm.OpenLastFMContext;
 import ru.blizzed.openlastfm.RequestsExecutor;
-import ru.blizzed.openlastfm.model.RootlessModelBuilder;
-import ru.blizzed.openlastfm.model.commons.Error;
+import ru.blizzed.openlastfm.models.Error;
+import ru.blizzed.openlastfm.models.ObjectModelParser;
 import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.io.IOException;
@@ -75,11 +75,11 @@ public final class ApiRequest<ResultType> {
 
     @SuppressWarnings("unchecked")
     private ApiResponse<ResultType> buildResultResponse(String originalResponse, JsonObject root) {
-        return new ApiResponse<>(this, originalResponse, (ResultType) getMethod().getModelBuilder().build(root));
+        return new ApiResponse<>(this, originalResponse, (ResultType) getMethod().getModelParser().parse(root));
     }
 
     private ApiResponse<Error> buildErrorResponse(String originalResponse, JsonObject root) {
-        return new ApiResponse<>(this, originalResponse, new RootlessModelBuilder<>("error", Error.class).build(root));
+        return new ApiResponse<>(this, originalResponse, new ObjectModelParser<>("error", Error.class).parse(root));
     }
 
     private ApiResponse<Error> buildErrorResponse(Response response) {

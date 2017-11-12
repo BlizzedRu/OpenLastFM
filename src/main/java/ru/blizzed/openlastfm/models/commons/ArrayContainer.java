@@ -1,6 +1,9 @@
-package ru.blizzed.openlastfm.model.commons;
+package ru.blizzed.openlastfm.models.commons;
 
-import com.google.gson.*;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParseException;
 import com.google.gson.annotations.JsonAdapter;
 
 import java.lang.reflect.Type;

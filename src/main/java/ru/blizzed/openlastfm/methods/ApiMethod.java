@@ -1,7 +1,6 @@
 package ru.blizzed.openlastfm.methods;
 
-import ru.blizzed.openlastfm.model.ModelBuilder;
-import ru.blizzed.openlastfm.model.ObjectModelBuilder;
+import ru.blizzed.openlastfm.models.ModelParser;
 import ru.blizzed.openlastfm.params.Param;
 
 import java.util.ArrayList;
@@ -20,9 +19,9 @@ public final class ApiMethod<ResultType> {
     private String alias;
     private String sectionAlias;
     private List<ApiParamDescription> paramsDescriptions;
-    private ModelBuilder<ResultType> modelBuilder;
+    private ModelParser<ResultType> modelParser;
 
-    public ApiMethod(String sectionAlias, String alias) {
+    private ApiMethod(String sectionAlias, String alias) {
         this.alias = alias;
         this.sectionAlias = sectionAlias;
         paramsDescriptions = new ArrayList<>();
@@ -63,18 +62,8 @@ public final class ApiMethod<ResultType> {
         return withParams(ApiParams.from(params));
     }
 
-    protected ApiMethod<ResultType> addParamsDescriptions(ApiParamDescription... paramsDescriptions) {
-        this.paramsDescriptions.addAll(Arrays.asList(paramsDescriptions));
-        return this;
-    }
-
-    protected ApiMethod<ResultType> setModelBuilder(ModelBuilder<ResultType> builder) {
-        this.modelBuilder = builder;
-        return this;
-    }
-
-    protected ModelBuilder<ResultType> getModelBuilder() {
-        return modelBuilder;
+    public ModelParser<ResultType> getModelParser() {
+        return modelParser;
     }
 
     private boolean checkForAllRequiredParams(ApiParams params) {
@@ -83,6 +72,35 @@ public final class ApiMethod<ResultType> {
                 .filter(p -> !params.asList().contains(p.getParam()))
                 .filter(p -> !params.asList().containsAll(p.getReplacements()))
                 .count() == 0;
+    }
+
+    public static class Builder<ResultType> {
+
+        private ApiMethod<ResultType> method;
+
+        public Builder(String sectionAlias, String alias) {
+            method = new ApiMethod<>(sectionAlias, alias);
+        }
+
+        public Builder<ResultType> addParamsDescriptions(ApiParamDescription... paramsDescriptions) {
+            method.paramsDescriptions.addAll(Arrays.asList(paramsDescriptions));
+            return this;
+        }
+
+        public Builder<ResultType> setSectionAlias(String sectionAlias) {
+            method.sectionAlias = sectionAlias;
+            return this;
+        }
+
+        public Builder<ResultType> setAlias(String alias) {
+            method.alias = alias;
+            return this;
+        }
+
+        public ApiMethod<ResultType> buildWithResultModelParser(ModelParser<ResultType> resultBuilder) {
+            method.modelParser = resultBuilder;
+            return method;
+        }
     }
 
 }

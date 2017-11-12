@@ -1,4 +1,4 @@
-package ru.blizzed.openlastfm.model;
+package ru.blizzed.openlastfm.models;
 
 import com.google.gson.JsonObject;
 
