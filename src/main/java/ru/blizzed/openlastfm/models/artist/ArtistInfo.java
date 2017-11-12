@@ -16,7 +16,7 @@ public class ArtistInfo extends BaseModel {
     private Bio bio;
     private ArrayContainer<Artist> similar;
 
-    public boolean iasOnTour() {
+    public boolean isOnTour() {
         return "1".equals(onTour);
     }
 
