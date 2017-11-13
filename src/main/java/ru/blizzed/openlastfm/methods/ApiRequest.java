@@ -25,7 +25,8 @@ public final class ApiRequest<ResultType> {
     public interface ApiRequestListener<ResponseType> {
         default void onComplete(ApiResponse<ResponseType> response) {
         }
-        default void onFailure(ApiRequest request, IOException exception) {
+
+        default void onFailure(ApiRequestException exception) {
         }
         default void onApiError(ApiResponse<Error> error) {
         }
@@ -121,7 +122,7 @@ public final class ApiRequest<ResultType> {
     }
 
     private void notifyFailure(ApiRequestListener<ResultType> listener, IOException e) {
-        if (listener != null) listener.onFailure(this, e);
+        if (listener != null) listener.onFailure(new ApiRequestException(e, this));
     }
 
     private Callback getDefaultCallBack(ApiRequestListener<ResultType> listener) {
