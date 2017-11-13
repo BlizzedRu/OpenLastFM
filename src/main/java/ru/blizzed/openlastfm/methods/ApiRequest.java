@@ -85,14 +85,12 @@ public final class ApiRequest<ResultType> {
     }
 
     private void parseAndNotify(String originalResponse, ApiRequestListener<ResultType> listener) {
-        JsonParser parser = new JsonParser();
-        JsonObject root = parser.parse(originalResponse).getAsJsonObject();
-
+        JsonObject root = getAsJson(originalResponse);
         if (isApiError(root)) notifyError(listener, buildErrorResponse(originalResponse, root));
         else notifyComplete(listener, buildResultResponse(originalResponse, root));
     }
 
-    private JsonObject getAsJson(String body) throws IOException {
+    private JsonObject getAsJson(String body) {
         JsonParser parser = new JsonParser();
         return parser.parse(body).getAsJsonObject();
     }
