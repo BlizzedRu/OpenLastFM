@@ -29,13 +29,18 @@ public class RequestsExecutor {
     public void execute(ApiRequest request, Callback callback) {
         Call call = okHttpClient.newCall(getAsOkHttpRequest(request));
         callMap.put(request.hashCode(), call);
-        try (Response response = call.execute()) {
+        try (Response response = execute(request, call)) {
             callback.onResponse(call, response);
         } catch (IOException e) {
             callback.onFailure(call, e);
         } finally {
             callMap.remove(request.hashCode());
         }
+    }
+
+    public Response execute(ApiRequest request) throws IOException {
+        Call call = okHttpClient.newCall(getAsOkHttpRequest(request));
+        return call.execute();
     }
 
     public void executeEnqueue(ApiRequest request, Callback callback) {
@@ -45,6 +50,15 @@ public class RequestsExecutor {
     public void cancel(ApiRequest request) {
         if (callMap.containsKey(request.hashCode())) {
             cancelCall(callMap.get(request.hashCode()));
+            callMap.remove(request.hashCode());
+        }
+    }
+
+    private Response execute(ApiRequest request, Call call) throws IOException {
+        callMap.put(request.hashCode(), call);
+        try {
+            return call.execute();
+        } finally {
             callMap.remove(request.hashCode());
         }
     }

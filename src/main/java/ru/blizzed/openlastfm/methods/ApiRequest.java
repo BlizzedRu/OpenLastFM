@@ -8,6 +8,8 @@ import okhttp3.Callback;
 import okhttp3.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.blizzed.openlastfm.ApiRequestException;
+import ru.blizzed.openlastfm.ApiResponseException;
 import ru.blizzed.openlastfm.OpenLastFMContext;
 import ru.blizzed.openlastfm.RequestsExecutor;
 import ru.blizzed.openlastfm.models.Error;
@@ -55,14 +57,31 @@ public final class ApiRequest<ResultType> {
         RequestsExecutor.getInstance().execute(this, getDefaultCallBack(listener));
     }
 
+    public ApiResponse<ResultType> execute() throws ApiResponseException, ApiRequestException {
+        try (Response response = RequestsExecutor.getInstance().execute(this)) {
+            return handleResponse(response);
+        } catch (IOException e) {
+            throw new ApiRequestException(e, this);
+        }
+    }
+
     public void cancel() {
         RequestsExecutor.getInstance().cancel(this);
+    }
+
+    private ApiResponse<ResultType> handleResponse(Response response) throws ApiResponseException, IOException {
+        String body = response.body().string();
+        JsonObject root = getAsJson(body);
+        if (!response.isSuccessful())
+            throw new ApiResponseException(buildErrorResponse(response));
+        if (isApiError(root))
+            throw new ApiResponseException(buildErrorResponse(body, root));
+        else return buildResultResponse(body, root);
     }
 
     private void handleResponse(ApiRequestListener<ResultType> listener, Response response) throws IOException {
         if (response.isSuccessful()) parseAndNotify(response.body().string(), listener);
         else notifyError(listener, buildErrorResponse(response));
-        response.close();
     }
 
     private void parseAndNotify(String originalResponse, ApiRequestListener<ResultType> listener) {
@@ -71,6 +90,11 @@ public final class ApiRequest<ResultType> {
 
         if (isApiError(root)) notifyError(listener, buildErrorResponse(originalResponse, root));
         else notifyComplete(listener, buildResultResponse(originalResponse, root));
+    }
+
+    private JsonObject getAsJson(String body) throws IOException {
+        JsonParser parser = new JsonParser();
+        return parser.parse(body).getAsJsonObject();
     }
 
     @SuppressWarnings("unchecked")
