@@ -1,11 +1,10 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
+import ru.blizzed.openlastfm.models.PageResult;
+import ru.blizzed.openlastfm.models.PaginatedResultModelParser;
 import ru.blizzed.openlastfm.models.artist.TaggedArtist;
 import ru.blizzed.openlastfm.params.LastFMParams;
-
-import java.util.List;
 
 public final class ApiLibrary {
 
@@ -14,14 +13,14 @@ public final class ApiLibrary {
     private ApiLibrary() {
     }
 
-    public static ApiMethod<List<TaggedArtist>> getArtists() {
-        return new ApiMethod.Builder<List<TaggedArtist>>(alias, "getArtists")
+    public static ApiMethod<PageResult<TaggedArtist>> getArtists() {
+        return new ApiMethod.Builder<PageResult<TaggedArtist>>(alias, "getArtists")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("artist", new TypeToken<List<TaggedArtist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<TaggedArtist>>() {
                 }));
     }
 

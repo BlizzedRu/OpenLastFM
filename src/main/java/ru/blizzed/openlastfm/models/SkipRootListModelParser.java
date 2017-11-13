@@ -8,17 +8,17 @@ import com.google.gson.reflect.TypeToken;
 import java.util.Collections;
 import java.util.List;
 
-public class SkipRootListModelParser<ContentType> extends SkipRootModelParser<List<ContentType>> {
+public class SkipRootListModelParser<ModelType> extends SkipRootModelParser<List<ModelType>> {
 
-    private TypeToken<List<ContentType>> typeToken;
+    private TypeToken<List<ModelType>> typeToken;
 
-    public SkipRootListModelParser(String elementTagName, TypeToken<List<ContentType>> typeToken) {
+    public SkipRootListModelParser(String elementTagName, TypeToken<List<ModelType>> typeToken) {
         super(elementTagName);
         this.typeToken = typeToken;
     }
 
     @Override
-    protected List<ContentType> parseRootless(JsonObject nextToRootElement) {
+    protected List<ModelType> parseRootless(JsonObject nextToRootElement) {
         if (!nextToRootElement.has(getElementTagName()))
             return Collections.emptyList();
         return parseList(nextToRootElement.getAsJsonArray(getElementTagName()));
@@ -30,7 +30,7 @@ public class SkipRootListModelParser<ContentType> extends SkipRootModelParser<Li
      * @param jsonArray
      * @return
      */
-    private List<ContentType> parseList(JsonArray jsonArray) {
+    private List<ModelType> parseList(JsonArray jsonArray) {
         return new Gson().fromJson(jsonArray, typeToken.getType());
     }
 

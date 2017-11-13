@@ -2,7 +2,7 @@ package ru.blizzed.openlastfm.models;
 
 import com.google.gson.JsonObject;
 
-public abstract class ModelParser<ContentType> {
+public abstract class ModelParser<ModelType> {
 
     private String elementTagName;
 
@@ -14,6 +14,6 @@ public abstract class ModelParser<ContentType> {
         return elementTagName;
     }
 
-    public abstract ContentType parse(JsonObject root);
+    public abstract ModelType parse(JsonObject root);
 
 }

@@ -1,9 +1,7 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.ObjectModelParser;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
-import ru.blizzed.openlastfm.models.User;
+import ru.blizzed.openlastfm.models.*;
 import ru.blizzed.openlastfm.models.album.Album;
 import ru.blizzed.openlastfm.models.album.TopAlbum;
 import ru.blizzed.openlastfm.models.artist.Artist;
@@ -22,8 +20,8 @@ public final class ApiUser {
     private ApiUser() {
     }
 
-    public static ApiMethod<List<DateTrack>> getArtistTracks() {
-        return new ApiMethod.Builder<List<DateTrack>>(alias, "getArtistTracks")
+    public static ApiMethod<PageResult<DateTrack>> getArtistTracks() {
+        return new ApiMethod.Builder<PageResult<DateTrack>>(alias, "getArtistTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.ARTIST, true),
@@ -31,19 +29,19 @@ public final class ApiUser {
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.END_TIMESTAMP, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<DateTrack>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<DateTrack>>() {
                 }));
     }
 
-    public static ApiMethod<List<User>> getFriends() {
-        return new ApiMethod.Builder<List<User>>(alias, "getFriends")
+    public static ApiMethod<PageResult<User>> getFriends() {
+        return new ApiMethod.Builder<PageResult<User>>(alias, "getFriends")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.RECENTTRACKS, true),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("user", new TypeToken<List<User>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<User>>() {
                 }));
     }
 
@@ -55,19 +53,19 @@ public final class ApiUser {
                 .buildWithResultModelParser(new ObjectModelParser<>("", User.class));
     }
 
-    public static ApiMethod<List<DateTrack>> getLovedTracks() {
-        return new ApiMethod.Builder<List<DateTrack>>(alias, "getLovedTracks")
+    public static ApiMethod<PageResult<DateTrack>> getLovedTracks() {
+        return new ApiMethod.Builder<PageResult<DateTrack>>(alias, "getLovedTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<DateTrack>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<DateTrack>>() {
                 }));
     }
 
-    public static ApiMethod<List<Artist>> getPersonalTags() {
-        return new ApiMethod.Builder<List<Artist>>(alias, "getPersonalTags")
+    public static ApiMethod<PageResult<Artist>> getPersonalTags() {
+        return new ApiMethod.Builder<PageResult<Artist>>(alias, "getPersonalTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.TAG, true),
@@ -75,12 +73,12 @@ public final class ApiUser {
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("artist", new TypeToken<List<Artist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Artist>>() {
                 }));
     }
 
-    public static ApiMethod<List<DateTrack>> getRecentTracks() {
-        return new ApiMethod.Builder<List<DateTrack>>(alias, "getRecentTracks")
+    public static ApiMethod<PageResult<DateTrack>> getRecentTracks() {
+        return new ApiMethod.Builder<PageResult<DateTrack>>(alias, "getRecentTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.USER, true),
@@ -89,31 +87,31 @@ public final class ApiUser {
                         new ApiParamDescription(LastFMParams.EXTENDED, false),
                         new ApiParamDescription(LastFMParams.TO, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<DateTrack>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<DateTrack>>() {
                 }));
     }
 
-    public static ApiMethod<List<TopAlbum>> getTopAlbums() {
-        return new ApiMethod.Builder<List<TopAlbum>>(alias, "getTopAlbums")
+    public static ApiMethod<PageResult<TopAlbum>> getTopAlbums() {
+        return new ApiMethod.Builder<PageResult<TopAlbum>>(alias, "getTopAlbums")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.PERIOD, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("album", new TypeToken<List<TopAlbum>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<TopAlbum>>() {
                 }));
     }
 
-    public static ApiMethod<List<Artist>> getTopArtists() {
-        return new ApiMethod.Builder<List<Artist>>(alias, "getTopArtists")
+    public static ApiMethod<PageResult<Artist>> getTopArtists() {
+        return new ApiMethod.Builder<PageResult<Artist>>(alias, "getTopArtists")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.PERIOD, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("artist", new TypeToken<List<Artist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Artist>>() {
                 }));
     }
 
@@ -127,15 +125,15 @@ public final class ApiUser {
                 }));
     }
 
-    public static ApiMethod<List<Track>> getTopTracks() {
-        return new ApiMethod.Builder<List<Track>>(alias, "getTopTracks")
+    public static ApiMethod<PageResult<Track>> getTopTracks() {
+        return new ApiMethod.Builder<PageResult<Track>>(alias, "getTopTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, true),
                         new ApiParamDescription(LastFMParams.PERIOD, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<Track>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Track>>() {
                 }));
     }
 

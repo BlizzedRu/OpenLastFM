@@ -1,10 +1,7 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.ObjectModelParser;
-import ru.blizzed.openlastfm.models.SearchResult;
-import ru.blizzed.openlastfm.models.SearchResultModelParser;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
+import ru.blizzed.openlastfm.models.*;
 import ru.blizzed.openlastfm.models.album.TopAlbum;
 import ru.blizzed.openlastfm.models.artist.ArtistInfo;
 import ru.blizzed.openlastfm.models.artist.FoundArtist;
@@ -68,8 +65,8 @@ public final class ApiArtist {
                 }));
     }
 
-    public static ApiMethod<List<TopAlbum>> getTopAlbums() {
-        return new ApiMethod.Builder<List<TopAlbum>>(alias, "getTopAlbums")
+    public static ApiMethod<PageResult<TopAlbum>> getTopAlbums() {
+        return new ApiMethod.Builder<PageResult<TopAlbum>>(alias, "getTopAlbums")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.MBID, false),
@@ -77,23 +74,23 @@ public final class ApiArtist {
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("album", new TypeToken<List<TopAlbum>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<TopAlbum>>() {
                 }));
     }
 
-    public static ApiMethod<List<TopTag>> getTopTags() {
-        return new ApiMethod.Builder<List<TopTag>>(alias, "getTopTags")
+    public static ApiMethod<PageResult<TopTag>> getTopTags() {
+        return new ApiMethod.Builder<PageResult<TopTag>>(alias, "getTopTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.MBID, false),
                         new ApiParamDescription(LastFMParams.AUTOCORRECT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("tag", new TypeToken<List<TopTag>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<TopTag>>() {
                 }));
     }
 
-    public static ApiMethod<List<Track>> getTopTracks() {
-        return new ApiMethod.Builder<List<Track>>(alias, "getTopTracks")
+    public static ApiMethod<PageResult<Track>> getTopTracks() {
+        return new ApiMethod.Builder<PageResult<Track>>(alias, "getTopTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.MBID, false),
@@ -101,7 +98,7 @@ public final class ApiArtist {
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<Track>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Track>>() {
                 }));
     }
 
@@ -112,7 +109,7 @@ public final class ApiArtist {
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.ARTIST, true)
                 )
-                .buildWithResultModelParser(new SearchResultModelParser<>(new TypeToken<SearchResult<FoundArtist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<SearchResult<FoundArtist>>() {
                 }));
     }
 

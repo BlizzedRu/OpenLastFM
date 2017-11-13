@@ -1,12 +1,11 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
+import ru.blizzed.openlastfm.models.PageResult;
+import ru.blizzed.openlastfm.models.PaginatedResultModelParser;
 import ru.blizzed.openlastfm.models.artist.Artist;
 import ru.blizzed.openlastfm.models.track.Track;
 import ru.blizzed.openlastfm.params.LastFMParams;
-
-import java.util.List;
 
 public final class ApiGeo {
 
@@ -15,26 +14,26 @@ public final class ApiGeo {
     private ApiGeo() {
     }
 
-    public static ApiMethod<List<Artist>> getTopArtists() {
-        return new ApiMethod.Builder<List<Artist>>(alias, "getTopArtists")
+    public static ApiMethod<PageResult<Artist>> getTopArtists() {
+        return new ApiMethod.Builder<PageResult<Artist>>(alias, "getTopArtists")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.COUNTRY, true),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("artist", new TypeToken<List<Artist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Artist>>() {
                 }));
     }
 
-    public static ApiMethod<List<Track>> getTopTracks() {
-        return new ApiMethod.Builder<List<Track>>(alias, "getTopTracks")
+    public static ApiMethod<PageResult<Track>> getTopTracks() {
+        return new ApiMethod.Builder<PageResult<Track>>(alias, "getTopTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.COUNTRY, true),
                         new ApiParamDescription(LastFMParams.LOCATION, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<Track>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Track>>() {
                 }));
     }
 

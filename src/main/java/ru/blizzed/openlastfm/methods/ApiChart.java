@@ -1,13 +1,12 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
+import ru.blizzed.openlastfm.models.PageResult;
+import ru.blizzed.openlastfm.models.PaginatedResultModelParser;
 import ru.blizzed.openlastfm.models.artist.Artist;
 import ru.blizzed.openlastfm.models.tag.TopTag;
 import ru.blizzed.openlastfm.models.track.Track;
 import ru.blizzed.openlastfm.params.LastFMParams;
-
-import java.util.List;
 
 public final class ApiChart {
 
@@ -16,33 +15,33 @@ public final class ApiChart {
     private ApiChart() {
     }
 
-    public static ApiMethod<List<Artist>> getTopArtists() {
-        return new ApiMethod.Builder<List<Artist>>(alias, "getTopArtists")
+    public static ApiMethod<PageResult<Artist>> getTopArtists() {
+        return new ApiMethod.Builder<PageResult<Artist>>(alias, "getTopArtists")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("artist", new TypeToken<List<Artist>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Artist>>() {
                 }));
     }
 
-    public static ApiMethod<List<TopTag>> getTopTags() {
-        return new ApiMethod.Builder<List<TopTag>>(alias, "getTopTags")
+    public static ApiMethod<PageResult<TopTag>> getTopTags() {
+        return new ApiMethod.Builder<PageResult<TopTag>>(alias, "getTopTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("tag", new TypeToken<List<TopTag>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<TopTag>>() {
                 }));
     }
 
-    public static ApiMethod<List<Track>> getTopTracks() {
-        return new ApiMethod.Builder<List<Track>>(alias, "getTopTracks")
+    public static ApiMethod<PageResult<Track>> getTopTracks() {
+        return new ApiMethod.Builder<PageResult<Track>>(alias, "getTopTracks")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.LIMIT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("track", new TypeToken<List<Track>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Track>>() {
                 }));
     }
 

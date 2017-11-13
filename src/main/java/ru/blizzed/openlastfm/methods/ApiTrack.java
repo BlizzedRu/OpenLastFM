@@ -1,10 +1,7 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.SearchResult;
-import ru.blizzed.openlastfm.models.SearchResultModelParser;
-import ru.blizzed.openlastfm.models.SkipRootListModelParser;
-import ru.blizzed.openlastfm.models.SkipRootObjectModelParser;
+import ru.blizzed.openlastfm.models.*;
 import ru.blizzed.openlastfm.models.correction.TrackCorrection;
 import ru.blizzed.openlastfm.models.tag.Tag;
 import ru.blizzed.openlastfm.models.track.FoundTrack;
@@ -69,15 +66,15 @@ public final class ApiTrack {
                 }));
     }
 
-    public static ApiMethod<List<Tag>> getTopTags() {
-        return new ApiMethod.Builder<List<Tag>>(alias, "getTopTags")
+    public static ApiMethod<PageResult<Tag>> getTopTags() {
+        return new ApiMethod.Builder<PageResult<Tag>>(alias, "getTopTags")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.MBID, false),
                         new ApiParamDescription(LastFMParams.ARTIST, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.TRACK, true, LastFMParams.MBID),
                         new ApiParamDescription(LastFMParams.AUTOCORRECT, false)
                 )
-                .buildWithResultModelParser(new SkipRootListModelParser<>("tag", new TypeToken<List<Tag>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<PageResult<Tag>>() {
                 }));
     }
 
@@ -89,7 +86,7 @@ public final class ApiTrack {
                         new ApiParamDescription(LastFMParams.TRACK, true),
                         new ApiParamDescription(LastFMParams.ARTIST, false)
                 )
-                .buildWithResultModelParser(new SearchResultModelParser<>(new TypeToken<SearchResult<FoundTrack>>() {
+                .buildWithResultModelParser(new PaginatedResultModelParser<>(new TypeToken<SearchResult<FoundTrack>>() {
                 }));
     }
 

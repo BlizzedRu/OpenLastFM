@@ -3,21 +3,21 @@ package ru.blizzed.openlastfm.models;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-public class ObjectModelParser<ContentType> extends ModelParser<ContentType> {
+public class ObjectModelParser<ModelType> extends ModelParser<ModelType> {
 
-    protected Class<ContentType> contentTypeClass;
+    protected Class<ModelType> contentTypeClass;
 
-    public ObjectModelParser(String elementTagName, Class<ContentType> contentTypeClass) {
+    public ObjectModelParser(String elementTagName, Class<ModelType> contentTypeClass) {
         super(elementTagName);
         this.contentTypeClass = contentTypeClass;
     }
 
     @Override
-    public ContentType parse(JsonObject root) {
+    public ModelType parse(JsonObject root) {
         return parseObject(root);
     }
 
-    private ContentType parseObject(JsonObject jsonObject) {
+    private ModelType parseObject(JsonObject jsonObject) {
         return new Gson().fromJson(jsonObject, contentTypeClass);
     }
 
