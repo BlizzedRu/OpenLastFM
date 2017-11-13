@@ -25,7 +25,6 @@ public final class ApiRequest<ResultType> {
     public interface ApiRequestListener<ResponseType> {
         default void onComplete(ApiResponse<ResponseType> response) {
         }
-
         default void onFailure(ApiRequestException exception) {
         }
         default void onApiError(ApiResponse<Error> error) {

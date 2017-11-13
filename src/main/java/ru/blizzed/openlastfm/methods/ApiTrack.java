@@ -1,10 +1,13 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
+import ru.blizzed.openlastfm.models.SearchResult;
+import ru.blizzed.openlastfm.models.SearchResultModelParser;
 import ru.blizzed.openlastfm.models.SkipRootListModelParser;
 import ru.blizzed.openlastfm.models.SkipRootObjectModelParser;
 import ru.blizzed.openlastfm.models.correction.TrackCorrection;
 import ru.blizzed.openlastfm.models.tag.Tag;
+import ru.blizzed.openlastfm.models.track.FoundTrack;
 import ru.blizzed.openlastfm.models.track.MatchableTrack;
 import ru.blizzed.openlastfm.models.track.Track;
 import ru.blizzed.openlastfm.params.LastFMParams;
@@ -78,15 +81,16 @@ public final class ApiTrack {
                 }));
     }
 
-    public static ApiMethod search() {
-        return new ApiMethod.Builder(alias, "search")
+    public static ApiMethod<SearchResult<FoundTrack>> search() {
+        return new ApiMethod.Builder<SearchResult<FoundTrack>>(alias, "search")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.TRACK, true),
                         new ApiParamDescription(LastFMParams.ARTIST, false)
                 )
-                .buildWithResultModelParser(null);
+                .buildWithResultModelParser(new SearchResultModelParser<>(new TypeToken<SearchResult<FoundTrack>>() {
+                }));
     }
 
 }

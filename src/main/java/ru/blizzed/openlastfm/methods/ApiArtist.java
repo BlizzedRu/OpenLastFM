@@ -2,9 +2,12 @@ package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
 import ru.blizzed.openlastfm.models.ObjectModelParser;
+import ru.blizzed.openlastfm.models.SearchResult;
+import ru.blizzed.openlastfm.models.SearchResultModelParser;
 import ru.blizzed.openlastfm.models.SkipRootListModelParser;
 import ru.blizzed.openlastfm.models.album.TopAlbum;
 import ru.blizzed.openlastfm.models.artist.ArtistInfo;
+import ru.blizzed.openlastfm.models.artist.FoundArtist;
 import ru.blizzed.openlastfm.models.artist.MatchableArtist;
 import ru.blizzed.openlastfm.models.correction.ArtistCorrection;
 import ru.blizzed.openlastfm.models.tag.Tag;
@@ -102,14 +105,15 @@ public final class ApiArtist {
                 }));
     }
 
-    public static ApiMethod search() {
-        return new ApiMethod.Builder<>(alias, "search")
+    public static ApiMethod<SearchResult<FoundArtist>> search() {
+        return new ApiMethod.Builder<SearchResult<FoundArtist>>(alias, "search")
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.LIMIT, false),
                         new ApiParamDescription(LastFMParams.PAGE, false),
                         new ApiParamDescription(LastFMParams.ARTIST, true)
                 )
-                .buildWithResultModelParser(null);
+                .buildWithResultModelParser(new SearchResultModelParser<>(new TypeToken<SearchResult<FoundArtist>>() {
+                }));
     }
 
 
