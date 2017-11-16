@@ -15,6 +15,11 @@ import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.util.List;
 
+/**
+ * This class provides available methods of section "Tag"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiTag {
 
     private static final String alias = "Tag";

@@ -6,6 +6,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class-container for set of {@link Param}
+ * <p>
+ * Instance can be got only from static method {@link #from(List)} or {@link #from(Param...)}
+ *
+ * @author BlizzedRu
+ */
 public final class ApiParams {
 
     private List<Param> params;
@@ -28,7 +35,7 @@ public final class ApiParams {
     }
 
     public boolean isEmpty() {
-        return params == null || params.isEmpty();
+        return params.isEmpty();
     }
 
 }

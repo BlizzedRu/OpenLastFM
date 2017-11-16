@@ -10,6 +10,11 @@ import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.util.List;
 
+/**
+ * This class provides available methods of section "Album"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiAlbum {
 
     private static final String alias = "Album";

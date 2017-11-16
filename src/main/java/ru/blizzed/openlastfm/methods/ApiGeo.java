@@ -7,6 +7,11 @@ import ru.blizzed.openlastfm.models.artist.Artist;
 import ru.blizzed.openlastfm.models.track.Track;
 import ru.blizzed.openlastfm.params.LastFMParams;
 
+/**
+ * This class provides available methods of section "Geo"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiGeo {
 
     private static final String alias = "Geo";

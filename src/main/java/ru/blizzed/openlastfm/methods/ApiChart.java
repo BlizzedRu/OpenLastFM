@@ -8,6 +8,11 @@ import ru.blizzed.openlastfm.models.tag.TopTag;
 import ru.blizzed.openlastfm.models.track.Track;
 import ru.blizzed.openlastfm.params.LastFMParams;
 
+/**
+ * This class provides available methods of section "Chart"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiChart {
 
     private static final String alias = "Chart";

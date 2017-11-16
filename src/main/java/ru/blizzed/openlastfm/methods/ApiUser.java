@@ -1,11 +1,15 @@
 package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.reflect.TypeToken;
-import ru.blizzed.openlastfm.models.*;
+import ru.blizzed.openlastfm.models.ObjectModelParser;
+import ru.blizzed.openlastfm.models.PageResult;
+import ru.blizzed.openlastfm.models.PaginatedResultModelParser;
+import ru.blizzed.openlastfm.models.SkipRootListModelParser;
 import ru.blizzed.openlastfm.models.album.Album;
 import ru.blizzed.openlastfm.models.album.TopAlbum;
 import ru.blizzed.openlastfm.models.artist.Artist;
 import ru.blizzed.openlastfm.models.commons.Chart;
+import ru.blizzed.openlastfm.models.commons.User;
 import ru.blizzed.openlastfm.models.tag.TopTag;
 import ru.blizzed.openlastfm.models.track.DateTrack;
 import ru.blizzed.openlastfm.models.track.Track;
@@ -13,6 +17,11 @@ import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.util.List;
 
+/**
+ * This class provides available methods of section "User"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiUser {
 
     private static final String alias = "User";

@@ -6,6 +6,11 @@ import ru.blizzed.openlastfm.models.PaginatedResultModelParser;
 import ru.blizzed.openlastfm.models.artist.TaggedArtist;
 import ru.blizzed.openlastfm.params.LastFMParams;
 
+/**
+ * This class provides available methods of section "Library"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiLibrary {
 
     private static final String alias = "Library";

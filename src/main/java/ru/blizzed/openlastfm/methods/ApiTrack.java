@@ -11,6 +11,11 @@ import ru.blizzed.openlastfm.params.LastFMParams;
 
 import java.util.List;
 
+/**
+ * This class provides available methods of section "Track"
+ *
+ * @author BlizzedRu (Ivan Vlasov)
+ */
 public final class ApiTrack {
 
     private static final String alias = "Track";
