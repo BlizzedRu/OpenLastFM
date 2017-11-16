@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2017 BlizzedRu (Ivan Vlasov)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ru.blizzed.openlastfm.params;
 
 public final class LastFMParams {
@@ -8,7 +24,7 @@ public final class LastFMParams {
     public static final Param<String> ARTIST = new Param<>("artist");
     public static final Param<String> ALBUM = new Param<>("album");
     public static final MBIDParam MBID = new MBIDParam("mbid");
-    public static final Param<String> AUTOCORRECT = new Param<>("autocorrect");
+    public static final BooleanParam AUTOCORRECT = new BooleanParam("autocorrect");
     public static final BooleanParam USERNAME = new BooleanParam("username");
     public static final Param<String> USER = new Param<>("user");
     public static final LangParam LANG = new LangParam("lang");
