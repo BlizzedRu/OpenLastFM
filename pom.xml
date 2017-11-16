@@ -26,11 +26,27 @@
     <packaging>jar</packaging>
     <name>OpenLastFM</name>
     <description>Simple Java library for non-auth methods of Last.FM API</description>
+    <url>https://github.com/BlizzedRu/OpenLastFM</url>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/BlizzedRu/OpenLastFM.git</connection>
+        <developerConnection>scm:git:https://github.com/BlizzedRu/OpenLastFM.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/BlizzedRu/OpenLastFM</url>
+    </scm>
 
     <dependencies>
         <dependency>
