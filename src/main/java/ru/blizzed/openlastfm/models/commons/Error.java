@@ -1,4 +1,4 @@
-package ru.blizzed.openlastfm.models;
+package ru.blizzed.openlastfm.models.commons;
 
 public class Error {
 

@@ -1,7 +1,6 @@
-package ru.blizzed.openlastfm.models;
+package ru.blizzed.openlastfm.models.commons;
 
 import com.google.gson.annotations.SerializedName;
-import ru.blizzed.openlastfm.models.commons.Image;
 
 import java.util.Date;
 

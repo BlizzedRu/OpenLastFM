@@ -1,7 +1,7 @@
 package ru.blizzed.openlastfm;
 
 import ru.blizzed.openlastfm.methods.ApiResponse;
-import ru.blizzed.openlastfm.models.Error;
+import ru.blizzed.openlastfm.models.commons.Error;
 
 public class ApiResponseException extends Exception {
 
