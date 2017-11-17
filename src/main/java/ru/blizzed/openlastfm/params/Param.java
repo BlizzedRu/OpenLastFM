@@ -18,6 +18,12 @@ package ru.blizzed.openlastfm.params;
 
 import java.util.Objects;
 
+/**
+ * A wrapper key-datatype class for params.
+ *
+ * @param <DataType> type that param expects
+ * @author BlizzedRu
+ */
 public class Param<DataType> {
 
     protected String name;
@@ -41,6 +47,13 @@ public class Param<DataType> {
         return data;
     }
 
+    /**
+     * Returns result of comparison this {@link Param} and another {@link Object}.
+     * <p><strong>true</strong> is always when o is a {@link Param} and has the same name
+     *
+     * @param o another object
+     * @return result of comparison
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

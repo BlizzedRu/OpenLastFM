@@ -26,7 +26,7 @@ public class LangParam extends Param<Locale> {
 
     @Override
     public String toString() {
-        if (data != null && data.getLanguage().length() != 0) {
+        if (data != null && !data.getLanguage().isEmpty()) {
             return data.getLanguage();
         } else throw new IllegalArgumentException("Locale is broken.");
     }

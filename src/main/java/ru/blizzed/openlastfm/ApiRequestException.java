@@ -20,6 +20,11 @@ import ru.blizzed.openlastfm.methods.ApiRequest;
 
 import java.io.IOException;
 
+/**
+ * This exception can be thrown when call to API cannot be established
+ *
+ * @author BlizzedRu
+ */
 public class ApiRequestException extends IOException {
 
     private ApiRequest apiRequest;
@@ -29,6 +34,11 @@ public class ApiRequestException extends IOException {
         this.apiRequest = apiRequest;
     }
 
+    /**
+     * Returns initial {@link ApiRequest}
+     *
+     * @return initial request
+     */
     public ApiRequest getApiRequest() {
         return apiRequest;
     }

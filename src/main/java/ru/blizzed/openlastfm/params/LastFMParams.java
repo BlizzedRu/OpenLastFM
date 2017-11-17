@@ -16,6 +16,13 @@
 
 package ru.blizzed.openlastfm.params;
 
+/**
+ * Common parameters for LastFM API methods
+ *
+ * @author BlizzedRu
+ * @see ru.blizzed.openlastfm.methods.ApiRequest
+ * @see ru.blizzed.openlastfm.methods.ApiMethod
+ */
 public final class LastFMParams {
 
     private LastFMParams() {

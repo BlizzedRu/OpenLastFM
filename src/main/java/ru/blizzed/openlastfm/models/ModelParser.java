@@ -18,10 +18,19 @@ package ru.blizzed.openlastfm.models;
 
 import com.google.gson.JsonObject;
 
+/**
+ * An abstract parser for model with type of ModelType
+ *
+ * @param <ModelType> a model type
+ * @author BlizzedRu
+ */
 public abstract class ModelParser<ModelType> {
 
     private String elementTagName;
 
+    /**
+     * @param elementTagName name of the root element tag
+     */
     public ModelParser(String elementTagName) {
         this.elementTagName = elementTagName;
     }
@@ -30,6 +39,12 @@ public abstract class ModelParser<ModelType> {
         return elementTagName;
     }
 
+    /**
+     * Returns a parsed model with type of ModelType
+     *
+     * @param root root element
+     * @return parsed model
+     */
     public abstract ModelType parse(JsonObject root);
 
 }

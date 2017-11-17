@@ -40,6 +40,8 @@ import java.util.Objects;
  * @see ru.blizzed.openlastfm.models.artist.Artist
  * @see ru.blizzed.openlastfm.models.track.Track
  * @see ru.blizzed.openlastfm.models.album.Album
+ *
+ * @author BlizzedRu
  */
 public class BaseModel {
 

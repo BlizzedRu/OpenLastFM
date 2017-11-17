@@ -20,6 +20,13 @@ package ru.blizzed.openlastfm.models;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+/**
+ * An abstract implementation of {@link SkipRootModelParser} for an object
+ * <p>Skips a root
+ *
+ * @param <ModelType> type of expected model
+ * @author BlizzedRu
+ */
 public class SkipRootObjectModelParser<ModelType> extends SkipRootModelParser<ModelType> {
 
     protected Class<ModelType> contentTypeClass;

@@ -20,6 +20,13 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Implementation of {@link ModelParser} for Paginated object
+ * <p>Skips root element
+ *
+ * @param <PaginatedType> type of expected paginated result
+ * @author BlizzedRu
+ */
 public class PaginatedResultModelParser<PaginatedType extends PaginatedResult> extends SkipRootModelParser<PaginatedType> {
 
     private TypeToken<PaginatedType> typeToken;

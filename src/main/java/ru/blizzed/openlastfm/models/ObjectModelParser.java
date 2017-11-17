@@ -19,6 +19,12 @@ package ru.blizzed.openlastfm.models;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+/**
+ * Implementation of {@link ModelParser} for simple object
+ *
+ * @param <ModelType> type of expected model
+ * @author BlizzedRu
+ */
 public class ObjectModelParser<ModelType> extends ModelParser<ModelType> {
 
     protected Class<ModelType> contentTypeClass;

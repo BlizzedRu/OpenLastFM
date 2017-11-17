@@ -18,13 +18,30 @@ package ru.blizzed.openlastfm;
 
 import com.sun.istack.internal.NotNull;
 
+/**
+ * Interface for initializing the {@link OpenLastFMContext}
+ * <p>
+ * <p>You can initialize the {@link OpenLastFMContext} with custom <i>version</i> or <i>lang</i> parameters
+ *
+ * @author BlizzedRu
+ */
 public interface OpenLastFMContextInitializer {
 
+    /**
+     * Use it at your own risk
+     *
+     * @return version
+     */
     @NotNull
     default String getVersion() {
         return "2.0";
     }
 
+    /**
+     * Your language expressed as an <strong>ISO 639 alpha-2 code</strong> <i>(e.g. "ru", "de", etc)</i>
+     *
+     * @return lang
+     */
     @NotNull
     default String getLang() {
         return "us";

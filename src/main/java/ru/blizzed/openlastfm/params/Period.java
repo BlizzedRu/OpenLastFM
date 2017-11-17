@@ -16,6 +16,10 @@
 
 package ru.blizzed.openlastfm.params;
 
+/**
+ * An Enumertion class for {@link PeriodParam}
+ * <p>Used in some LastFM API methods, e.g <i>>user.getTopArtists</i>
+ */
 public enum Period {
 
     WEEK("7day"),

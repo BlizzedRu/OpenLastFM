@@ -19,6 +19,11 @@ package ru.blizzed.openlastfm;
 import ru.blizzed.openlastfm.methods.ApiResponse;
 import ru.blizzed.openlastfm.models.commons.Error;
 
+/**
+ * This exception can be thrown when API has been called but response contains an error
+ *
+ * @author BlizzedRu
+ */
 public class ApiResponseException extends Exception {
 
     private ApiResponse<Error> errorResponse;
@@ -27,6 +32,11 @@ public class ApiResponseException extends Exception {
         this.errorResponse = errorResponse;
     }
 
+    /**
+     * Returns {@link ApiResponse} that contains an {@link Error}
+     *
+     * @return response with error
+     */
     public ApiResponse<Error> getErrorResponse() {
         return errorResponse;
     }

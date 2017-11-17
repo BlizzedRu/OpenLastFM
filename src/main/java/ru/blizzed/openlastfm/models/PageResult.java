@@ -20,6 +20,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Implementation of {@link PaginatedResult} for page
+ *
+ * @param <ModelType> type of elements on the page
+ */
 public class PageResult<ModelType> implements PaginatedResult<PageResult<ModelType>> {
 
     @SerializedName(value = "track", alternate = {"album", "tag", "artist"})

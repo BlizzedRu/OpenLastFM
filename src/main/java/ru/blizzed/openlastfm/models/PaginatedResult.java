@@ -24,6 +24,12 @@ import ru.blizzed.openlastfm.params.Param;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An interface for building page-like result of some Last.FM API methods
+ * <p>E.g. artist.getSimilar, user.getTopAlbums, artist.search, etc
+ *
+ * @param <ModelType> of expected items type
+ */
 public interface PaginatedResult<ModelType> {
 
     int getCurrentPage();
@@ -34,6 +40,12 @@ public interface PaginatedResult<ModelType> {
         return getCurrentPage() < getTotalPages();
     }
 
+    /**
+     * Returns an {@link ApiRequest} for getting the next page by last (previous) {@link ApiRequest}
+     *
+     * @param prevRequest last (previous) request whose response is paginated
+     * @return next {@link ApiRequest} for getting the next page
+     */
     @SuppressWarnings("unchecked")
     default ApiRequest<ModelType> getNextPageRequest(ApiRequest<ModelType> prevRequest) {
         List<Param> params = new ArrayList<>(prevRequest.getParams().asList());

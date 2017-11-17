@@ -23,6 +23,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
+/**
+ * Implementation of {@link PaginatedResult} for search result
+ *
+ * @param <ModelType> type of expected items on search page
+ * @author BlizzedRu
+ */
 public class SearchResult<ModelType extends BaseModel> implements PaginatedResult<SearchResult<ModelType>> {
 
     @SerializedName("opensearch:Query")
@@ -44,6 +50,11 @@ public class SearchResult<ModelType extends BaseModel> implements PaginatedResul
         return query;
     }
 
+    /**
+     * Returns total amount of found items
+     *
+     * @return total amount of items
+     */
     public int getTotalResults() {
         return totalResults;
     }
@@ -60,6 +71,11 @@ public class SearchResult<ModelType extends BaseModel> implements PaginatedResul
         return items.getData();
     }
 
+    /**
+     * Returns amount of loaded items
+     *
+     * @return amount of loaded items
+     */
     public int getRealItemsCount() {
         return getItems().size();
     }

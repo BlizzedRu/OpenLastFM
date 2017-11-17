@@ -23,6 +23,14 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * This class executes all {@link ApiRequest} using {@link OkHttpClient}
+ *
+ * @author BlizzedRu
+ * @see ApiRequest#execute()
+ * @see ApiRequest#execute(ApiRequest.ApiRequestListener)
+ * @see ApiRequest#executeEnqueue(ApiRequest.ApiRequestListener)
+ */
 public class RequestsExecutor {
 
     private static RequestsExecutor instance;

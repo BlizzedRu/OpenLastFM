@@ -24,6 +24,13 @@ import com.google.gson.reflect.TypeToken;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * An abstract implementation of {@link SkipRootModelParser} for a list of objects
+ * <p>Skips a root
+ *
+ * @param <ModelType> type of expected list type
+ * @author BlizzedRu
+ */
 public class SkipRootListModelParser<ModelType> extends SkipRootModelParser<List<ModelType>> {
 
     private TypeToken<List<ModelType>> typeToken;
@@ -44,7 +51,7 @@ public class SkipRootListModelParser<ModelType> extends SkipRootModelParser<List
      * Uses TypeToken because Google's Gson can't get generic type at runtime
      *
      * @param jsonArray
-     * @return
+     * @return parsed {@link List} of objects
      */
     private List<ModelType> parseList(JsonArray jsonArray) {
         return new Gson().fromJson(jsonArray, typeToken.getType());

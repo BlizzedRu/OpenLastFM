@@ -29,4 +29,5 @@ public class MBIDParam extends Param<String> {
         if (data != null && data.matches(MBID_PATTERN)) return super.of(data);
         else throw new IllegalArgumentException("Param doesn't match MBID pattern.");
     }
+
 }
