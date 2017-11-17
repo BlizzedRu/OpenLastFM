@@ -29,6 +29,11 @@ import java.util.List;
  * <p>E.g. artist.getSimilar, user.getTopAlbums, artist.search, etc
  *
  * @param <ModelType> of expected items type
+ *
+ * @see SearchResult
+ * @see PageResult
+ *
+ * @author BlizzedRu
  */
 public interface PaginatedResult<ModelType> {
 

@@ -30,6 +30,7 @@ import java.util.List;
  * Container class for exclude root element from useless wrapped json array
  *
  * @param <E> type of expected data
+ *
  * @author BlizzedRu
  */
 @JsonAdapter(ArrayContainer.Deserializer.class)

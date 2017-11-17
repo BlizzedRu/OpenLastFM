@@ -24,6 +24,8 @@ import java.util.List;
  * Implementation of {@link PaginatedResult} for page
  *
  * @param <ModelType> type of elements on the page
+ *
+ * @author BlizzedRu
  */
 public class PageResult<ModelType> implements PaginatedResult<PageResult<ModelType>> {
 

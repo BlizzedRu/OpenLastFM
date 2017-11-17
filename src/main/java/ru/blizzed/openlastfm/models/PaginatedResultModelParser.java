@@ -25,6 +25,7 @@ import com.google.gson.reflect.TypeToken;
  * <p>Skips root element
  *
  * @param <PaginatedType> type of expected paginated result
+ *
  * @author BlizzedRu
  */
 public class PaginatedResultModelParser<PaginatedType extends PaginatedResult> extends SkipRootModelParser<PaginatedType> {

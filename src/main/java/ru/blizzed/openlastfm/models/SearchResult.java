@@ -27,6 +27,7 @@ import java.util.List;
  * Implementation of {@link PaginatedResult} for search result
  *
  * @param <ModelType> type of expected items on search page
+ *
  * @author BlizzedRu
  */
 public class SearchResult<ModelType extends BaseModel> implements PaginatedResult<SearchResult<ModelType>> {

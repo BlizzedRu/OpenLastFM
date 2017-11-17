@@ -29,6 +29,7 @@ import java.util.List;
  * <p>Skips a root
  *
  * @param <ModelType> type of expected list type
+ *
  * @author BlizzedRu
  */
 public class SkipRootListModelParser<ModelType> extends SkipRootModelParser<List<ModelType>> {

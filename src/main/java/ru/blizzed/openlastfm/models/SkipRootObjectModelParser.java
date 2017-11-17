@@ -25,6 +25,7 @@ import com.google.gson.JsonObject;
  * <p>Skips a root
  *
  * @param <ModelType> type of expected model
+ *
  * @author BlizzedRu
  */
 public class SkipRootObjectModelParser<ModelType> extends SkipRootModelParser<ModelType> {

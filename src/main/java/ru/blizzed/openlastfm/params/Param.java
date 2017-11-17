@@ -22,6 +22,7 @@ import java.util.Objects;
  * A wrapper key-datatype class for params.
  *
  * @param <DataType> type that param expects
+ *
  * @author BlizzedRu
  */
 public class Param<DataType> {

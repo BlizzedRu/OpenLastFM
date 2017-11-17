@@ -22,6 +22,7 @@ import com.google.gson.JsonObject;
  * An abstract parser for model with type of ModelType
  *
  * @param <ModelType> a model type
+ *
  * @author BlizzedRu
  */
 public abstract class ModelParser<ModelType> {

@@ -26,10 +26,11 @@ import java.util.Locale;
  * <p>There are many <i>initialize</i> versions for you, choose the appropriate one
  * <p>
  *
- * @author BlizzedRu
  * @see #initialize(String)
  * @see #initialize(String, Locale)
  * @see #initialize(OpenLastFMContextInitializer)
+ *
+ * @author BlizzedRu
  */
 public final class OpenLastFMContext {
 
