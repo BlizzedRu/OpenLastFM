@@ -16,8 +16,6 @@
 
 package ru.blizzed.openlastfm;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.Locale;
 
 /**
@@ -52,7 +50,7 @@ public final class OpenLastFMContext {
      *
      * @param apiKey your Last.FM API key
      */
-    public static void initialize(@NotNull String apiKey) {
+    public static void initialize(String apiKey) {
         if (!isInitialized()) instance = new OpenLastFMContext();
         instance.initializer = () -> apiKey;
     }
@@ -69,7 +67,7 @@ public final class OpenLastFMContext {
      * @param apiKey     your Last.FM API key
      * @param langLocale your {@link Locale}
      */
-    public static void initialize(@NotNull String apiKey, @NotNull Locale langLocale) {
+    public static void initialize(String apiKey, Locale langLocale) {
         if (!isInitialized()) instance = new OpenLastFMContext();
         instance.initializer = new OpenLastFMContextInitializer() {
             @Override
@@ -92,7 +90,7 @@ public final class OpenLastFMContext {
      *
      * @param customContextInitializer your custom {@link OpenLastFMContextInitializer}
      */
-    public static void initialize(@NotNull OpenLastFMContextInitializer customContextInitializer) {
+    public static void initialize(OpenLastFMContextInitializer customContextInitializer) {
         if (!isInitialized()) instance = new OpenLastFMContext();
         instance.initializer = customContextInitializer;
     }

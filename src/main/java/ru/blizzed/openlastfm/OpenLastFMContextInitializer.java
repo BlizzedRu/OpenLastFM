@@ -16,8 +16,6 @@
 
 package ru.blizzed.openlastfm;
 
-import com.sun.istack.internal.NotNull;
-
 /**
  * Interface for initializing the {@link OpenLastFMContext}
  * <p>
@@ -32,7 +30,6 @@ public interface OpenLastFMContextInitializer {
      *
      * @return version
      */
-    @NotNull
     default String getVersion() {
         return "2.0";
     }
@@ -42,12 +39,10 @@ public interface OpenLastFMContextInitializer {
      *
      * @return lang
      */
-    @NotNull
     default String getLang() {
         return "us";
     }
 
-    @NotNull
     String getApiKey();
 
 }

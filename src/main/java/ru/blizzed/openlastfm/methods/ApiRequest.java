@@ -18,7 +18,6 @@ package ru.blizzed.openlastfm.methods;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.sun.istack.internal.NotNull;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
@@ -112,7 +111,7 @@ public final class ApiRequest<ResultType> {
      * @param listener {@link ApiRequestListener} to get callbacks
      * @see #execute(ApiRequestListener)
      */
-    public void executeEnqueue(@NotNull ApiRequestListener<ResultType> listener) {
+    public void executeEnqueue(ApiRequestListener<ResultType> listener) {
         RequestsExecutor.getInstance().executeEnqueue(this, getDefaultCallBack(listener));
     }
 
@@ -128,7 +127,7 @@ public final class ApiRequest<ResultType> {
      *
      * @param listener {@link ApiRequestListener} to get callbacks
      */
-    public void execute(@NotNull ApiRequestListener<ResultType> listener) {
+    public void execute(ApiRequestListener<ResultType> listener) {
         RequestsExecutor.getInstance().execute(this, getDefaultCallBack(listener));
     }
 
