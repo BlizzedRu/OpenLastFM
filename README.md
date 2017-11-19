@@ -1,20 +1,20 @@
 # OpenLastFM
-Simple Java library for non-auth methods of Last.fm API
+Simple Java library for non-auth methods of [Last.fm API][documentation].
 
 **OpenLastFM** provides all available [Last.fm API][documentation] methods that don't require user authorization.
 Can be useful for grabbing some data from the service. E.g. artist info, album alias correction, popular tracks around and etc.
 
 * Contains Java object wrappers for any API response
-* Supports paginated results response (search or lists with many objects)
-* Supports checking methods for required parameters before calling
-* Supports consistent queries
+* Supports paginated result response (search or lists with many objects)
 * Convenient request builders
+* Can check methods for required parameters before calling
+* Supports consistent queries
 
 Full list of methods is available in [Last.fm API Documentation][documentation]
 
 ## Installing
 
-##### Maven
+#### Maven
 
 In your pom.xml inside the *\<dependencies>* tag
 ```xml
@@ -28,7 +28,7 @@ In your pom.xml inside the *\<dependencies>* tag
 </dependencies>
 ```
 
-##### Gradle
+#### Gradle
 
 In your build.gradle file inside the *dependencies* section
 
@@ -50,8 +50,8 @@ dependencies {
   
 ## Usage
 
-##### Initialization
-First of all you need to initialize library by calling one of available initialize methods.
+#### Initialization
+First of all you need to initialize library by calling one of available `initialize` methods.
 
 * You don't care about `lang` param *(default is **US**)*
 ```java 
@@ -63,7 +63,7 @@ OpenLastFMContext.initialize("your-last-fm-api-key", Locale.YOUR_LOCALE);
 ```
 You can configure each request with `lang` param to support multilanguage
 
-##### Building and executing of requests
+#### Building and executing of requests
 For example, you need to call a method from the `artist` section, then needed class, that contains all available methods, is `ApiArtist`. 
 This class (and others such classes) provides you completed methods with expected result calling type.
 
@@ -123,7 +123,7 @@ Wow! We learned that Dimmu Borgir is amazing norwegian Symphonic Black Metal ban
 But what if you want to get only 5 tracks now and others you are going to estimate tomorrow when your roommate will go away and you will got a wonderful opportunity for a powerful headbanging? 
 Hmm.. Let's take a look!
 
-##### Paginated responses
+#### Paginated responses
 Here we are building our initial request as usual and if we need the next page just call `getNextPageRequest` 
 ```java 
 ApiRequest<PageResult<Track>> request = ApiArtist.getTopTracks().withParams(
@@ -136,7 +136,7 @@ trackPage.getItems().forEach(System.out::println);
 PageResult<Track> nextPage = trackPage.getNextPageRequest(request).execute().getContent();
 ```
 
-##### Request cancelling
+#### Request cancelling
 Something went wrong and your roommate is coming back so you need to cancel request for the next portion of headbanging tracks immediately:
 ```java 
 request.cancel();
@@ -144,13 +144,13 @@ request.cancel();
 
 ## Customization
 
-##### Custom param
+#### Custom param
 You can create your own `Param` with certain content type
 ```java 
 Param<SomeType> param = new Param("paramName");
 ```
 
-##### Custom method
+#### Custom method
 ```java 
 ApiMethod<SomeType> albumApiMethod = new ApiMethod.Builder<SomeType>("sectionName", "method")
                 .addParamsDescriptions(
