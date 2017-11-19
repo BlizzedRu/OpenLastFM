@@ -63,19 +63,19 @@ OpenLastFMContext.initialize("your-last-fm-api-key", Locale.YOUR_LOCALE);
 ```
 You can configure each request with `lang` param to support multilanguage
 
-#### Building and executing of requests
+#### Building and executing requests
 For example, you need to call a method from the `artist` section, then needed class, that contains all available methods, is `ApiArtist`. 
 This class (and others such classes) provides you completed methods with expected result calling type.
 
 ```java 
-ApiMethod<ArtistInfo> artistInfo = ApiArtist.getInfo();
+ApiMethod<ArtistInfo> artistInfoMethod = ApiArtist.getInfo();
 ```
 
 Now you need to pass params into the method and generate a request. In OpenLastFM all requests are `ApiRequest`'s.
 You can get it by calling `withParams` method of gotten `ApiMethod` with needed set of params.
 All params are instance of `Param` and have expected input data type. Static class `LastFMParams` contains completed instances of all parameters so you should use it.
 ```java 
-ApiRequest<ArtistInfo> request = artistInfo.execute(LastFMParams.ARTIST.of("Dimmu Borgir"));
+ApiRequest<ArtistInfo> request = artistInfoMethod.execute(LastFMParams.ARTIST.of("Dimmu Borgir"));
 ```
 or the same but with a set of params
 ```java 
@@ -106,7 +106,7 @@ request.execute(new ApiRequest.ApiRequestListener<ArtistInfo>() {
     }
 });
 ```
-***Note:** you can override not all callback methods*
+***Tip:** you can override not all callback methods*
 
 * With exceptions handling 
 ```java 
@@ -120,7 +120,7 @@ try {
 ```
   
 Wow! We learned that Dimmu Borgir is amazing norwegian Symphonic Black Metal band and now we want to get and listen to their tracks from the best album! 
-But what if you want to get only 5 tracks now and others you are going to estimate tomorrow when your roommate will go away and you will got a wonderful opportunity for a powerful headbanging? 
+But what if you want to get only 5 tracks now, and others you are going to estimate tomorrow when your roommate will go away and you will got a wonderful opportunity for a powerful headbanging? 
 Hmm.. Let's take a look!
 
 #### Paginated responses
