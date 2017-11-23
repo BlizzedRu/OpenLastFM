@@ -75,11 +75,11 @@ Now you need to pass params into the method and generate a request. In OpenLastF
 You can get it by calling `withParams` method of gotten `ApiMethod` with needed set of params.
 All params are instance of `Param` and have expected input data type. Static class `LastFMParams` contains completed instances of all parameters so you should use it.
 ```java 
-ApiRequest<ArtistInfo> request = artistInfoMethod.execute(LastFMParams.ARTIST.of("Dimmu Borgir"));
+ApiRequest<ArtistInfo> request = artistInfoMethod.withParams(LastFMParams.ARTIST.of("Dimmu Borgir"));
 ```
 or the same but with a set of params
 ```java 
-ApiRequest<ArtistInfo> request = artistInfo.execute(
+ApiRequest<ArtistInfo> request = artistInfoMethod.withParams(
             LastFMParams.ARTIST.of("Dimmu Borgir"),
             LastFMParams.LANG.of(Locale.GERMAN)
 );
