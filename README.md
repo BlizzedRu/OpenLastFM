@@ -53,7 +53,7 @@ dependencies {
 #### Initialization
 First of all you need to initialize library by calling one of available `initialize` methods.
 
-* You don't care about `lang` param *(default is **US**)*
+* You don't care about `lang` param *(default is **EN**)*
 ```java 
 OpenLastFMContext.initialize("your-last-fm-api-key");
 ```

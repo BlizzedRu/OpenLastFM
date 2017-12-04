@@ -44,7 +44,7 @@ public final class OpenLastFMContext {
     /**
      * The simplest way to initialize OpenLastFM
      * <p>
-     * Use this one if you don't care about <i>lang</i> param <i>(default is <strong>US</strong>)</i>
+     * Use this one if you don't care about <i>lang</i> param <i>(default is <strong>EN</strong>)</i>
      * <p>
      * If you need multilanguage you can use this one and pass a <i>lang</i> param in each method requires it
      *
@@ -58,7 +58,7 @@ public final class OpenLastFMContext {
     /**
      * A simple way to initialize OpenLastFM
      * <p>
-     * Use this one if you need a custom <i>(not <strong>US</strong>)</i> language
+     * Use this one if you need a custom <i>(not <strong>EN</strong>)</i> language
      * <p>
      * If you need multilanguage you can use {@link #initialize(String)} and pass a <i>lang</i> param in each method requires it
      * <p>Last.FM requires language expressed as an <strong>ISO 639 alpha-2 code</strong> <i>(e.g. "ru", "de", "fr", etc)</i>

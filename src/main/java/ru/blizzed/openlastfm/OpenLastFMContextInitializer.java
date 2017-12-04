@@ -40,7 +40,7 @@ public interface OpenLastFMContextInitializer {
      * @return lang
      */
     default String getLang() {
-        return "us";
+        return "en";
     }
 
     String getApiKey();
