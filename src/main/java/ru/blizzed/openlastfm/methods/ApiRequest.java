@@ -164,21 +164,15 @@ public final class ApiRequest<ResultType> {
         String body = response.body().string();
         JsonObject root = getAsJson(body);
         if (!response.isSuccessful())
-            throw new ApiResponseException(buildErrorResponse(response));
-        if (isApiError(root))
             throw new ApiResponseException(buildErrorResponse(body, root));
-        else return buildResultResponse(body, root);
+        return buildResultResponse(body, root);
     }
 
     private void handleResponse(ApiRequestListener<ResultType> listener, Response response) throws IOException {
-        if (response.isSuccessful()) parseAndNotify(response.body().string(), listener);
-        else notifyError(listener, buildErrorResponse(response));
-    }
-
-    private void parseAndNotify(String originalResponse, ApiRequestListener<ResultType> listener) {
+        String originalResponse = response.body().string();
         JsonObject root = getAsJson(originalResponse);
-        if (isApiError(root)) notifyError(listener, buildErrorResponse(originalResponse, root));
-        else notifyComplete(listener, buildResultResponse(originalResponse, root));
+        if (response.isSuccessful()) notifyComplete(listener, buildResultResponse(originalResponse, root));
+        else notifyError(listener, buildErrorResponse(originalResponse, root));
     }
 
     private JsonObject getAsJson(String body) {
@@ -192,15 +186,7 @@ public final class ApiRequest<ResultType> {
     }
 
     private ApiResponse<Error> buildErrorResponse(String originalResponse, JsonObject root) {
-        return new ApiResponse<>(this, originalResponse, new ObjectModelParser<>("error", Error.class).parse(root));
-    }
-
-    private ApiResponse<Error> buildErrorResponse(Response response) {
-        return new ApiResponse<>(this, "", new Error(response.code(), response.message()));
-    }
-
-    private boolean isApiError(JsonObject root) {
-        return root.keySet().iterator().next().equals(Error.JSON_KEY);
+        return new ApiResponse<>(this, originalResponse, new ObjectModelParser<>("", Error.class).parse(root));
     }
 
     private void notifyComplete(ApiRequestListener<ResultType> listener, ApiResponse<ResultType> response) {

@@ -18,8 +18,6 @@ package ru.blizzed.openlastfm.models.commons;
 
 public class Error {
 
-    public static final String JSON_KEY = "error";
-
     private int error;
     private String message;
 
