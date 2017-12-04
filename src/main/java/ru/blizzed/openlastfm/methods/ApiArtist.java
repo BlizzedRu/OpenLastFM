@@ -47,7 +47,7 @@ public final class ApiArtist {
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.ARTIST, true)
                 )
-                .buildWithResultModelParser(new ObjectModelParser<>("correction", ArtistCorrection.class));
+                .buildWithResultModelParser(new SkipRootObjectModelParser<>("correction", ArtistCorrection.class));
     }
 
     public static ApiMethod<ArtistInfo> getInfo() {

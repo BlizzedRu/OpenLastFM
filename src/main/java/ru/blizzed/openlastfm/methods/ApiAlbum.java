@@ -48,7 +48,7 @@ public final class ApiAlbum {
                         new ApiParamDescription(LastFMParams.USERNAME, false),
                         new ApiParamDescription(LastFMParams.LANG, false)
                 )
-                .buildWithResultModelParser(new ObjectModelParser<>("", AlbumInfo.class));
+                .buildWithResultModelParser(new ObjectModelParser<>("album", AlbumInfo.class));
     }
 
     public static ApiMethod<List<Tag>> getTags() {

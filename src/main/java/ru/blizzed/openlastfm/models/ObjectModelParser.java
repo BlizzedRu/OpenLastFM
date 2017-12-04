@@ -37,7 +37,8 @@ public class ObjectModelParser<ModelType> extends ModelParser<ModelType> {
 
     @Override
     public ModelType parse(JsonObject root) {
-        return parseObject(root);
+        if (getElementTagName().isEmpty()) return parseObject(root);
+        return parseObject(root.getAsJsonObject(getElementTagName()));
     }
 
     private ModelType parseObject(JsonObject jsonObject) {

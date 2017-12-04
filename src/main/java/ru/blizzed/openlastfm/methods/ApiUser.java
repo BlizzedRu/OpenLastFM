@@ -75,7 +75,7 @@ public final class ApiUser {
                 .addParamsDescriptions(
                         new ApiParamDescription(LastFMParams.USER, false)
                 )
-                .buildWithResultModelParser(new ObjectModelParser<>("", User.class));
+                .buildWithResultModelParser(new ObjectModelParser<>("user", User.class));
     }
 
     public static ApiMethod<PageResult<DateTrack>> getLovedTracks() {
