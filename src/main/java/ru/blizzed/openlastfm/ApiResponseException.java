@@ -29,6 +29,7 @@ public class ApiResponseException extends Exception {
     private ApiResponse<Error> errorResponse;
 
     public ApiResponseException(ApiResponse<Error> errorResponse) {
+        super(errorResponse.getContent().getMessage());
         this.errorResponse = errorResponse;
     }
 
