@@ -23,7 +23,7 @@ In your pom.xml inside the *\<dependencies>* tag
     <dependency>
         <groupId>ru.blizzed</groupId>
         <artifactId>openlastfm</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 </dependencies>
 ```
@@ -36,7 +36,7 @@ In your build.gradle file inside the *dependencies* section
 ``` 
 dependencies {
    ...
-   implementation 'ru.blizzed:openlastfm:1.0.1'
+   implementation 'ru.blizzed:openlastfm:1.0.2'
 }
 ```
   
@@ -44,7 +44,7 @@ dependencies {
 ``` 
 dependencies {
     ...
-    compile 'ru.blizzed:openlastfm:1.0.1'
+    compile 'ru.blizzed:openlastfm:1.0.2'
 }
 ```
   
