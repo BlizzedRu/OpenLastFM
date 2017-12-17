@@ -23,7 +23,7 @@ In your pom.xml inside the *\<dependencies>* tag
     <dependency>
         <groupId>ru.blizzed</groupId>
         <artifactId>openlastfm</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </dependency>
 </dependencies>
 ```
@@ -36,7 +36,7 @@ In your build.gradle file inside the *dependencies* section
 ``` 
 dependencies {
    ...
-   implementation 'ru.blizzed:openlastfm:1.0.2'
+   implementation 'ru.blizzed:openlastfm:1.0.3'
 }
 ```
   
@@ -44,7 +44,7 @@ dependencies {
 ``` 
 dependencies {
     ...
-    compile 'ru.blizzed:openlastfm:1.0.2'
+    compile 'ru.blizzed:openlastfm:1.0.3'
 }
 ```
   
@@ -141,6 +141,10 @@ Something went wrong and your roommate is coming back so you need to cancel requ
 ```java 
 request.cancel();
 ```
+
+#### Errors
+
+You can use `errors.LastFMErrors` class that contains all Last.FM API errors with descriptions.
 
 ## Customization
 
